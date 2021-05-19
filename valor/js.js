@@ -1,48 +1,53 @@
 $(document).ready(function () {
     $(".before .unselected").click(function () {
-        $(this).parent().children().removeClass('selected');
-        $(this).addClass('selected');
+        cssmod($(this));
         beforeLevel = (parseInt(this.textContent));
-        if(afterLevel != 0) {
+        if (afterLevel != 0) {
             calculateValor();
         };
     });
     $(".after .unselected").click(function () {
-        $(this).parent().children().removeClass('selected');
-        $(this).addClass('selected');
+        cssmod($(this));
         afterLevel = (parseInt(this.textContent));
-        if(beforeLevel != 0) {
+        if (beforeLevel != 0) {
             calculateValor();
         };
     });
     $(".atype .unselected").click(function () {
-        $(this).parent().children().removeClass('selected');
-        $(this).addClass('selected');
-        atype = (this.textContent.trim());
-        if(beforeLevel != 0) {
+        cssmod($(this));
+        armortype = (this.textContent.trim());
+        if (beforeLevel != 0) {
             calculateValor();
         };
     });
 });
 
+// Defaults
 var beforeLevel = 0;
 var afterLevel = 0;
-modifier = 250;
-atype = "Shield / Offhand / Ring / Cloak / Bracer / Neck";
+var armortype = "Shield / Offhand / Ring / Cloak / Bracer / Neck"
+var atype = new Map();
 
-var levelsPossible = [184,187,190,194,197,200,203,207,210,213,216,220];
+atype.set("Shield / Offhand / Ring / Cloak / Bracer / Neck", 250);
+atype.set("Trinket / Belt / Shoulder / Gloves / Boots", 400);
+atype.set("Helm / Legs / Chest", 475);
+atype.set("1h Agi/Str Weapon", 500);
+atype.set("1h Int Weapon", 750);
+atype.set("2h Weapon", 1000);
+
+var levelsPossible = [184, 187, 190, 194, 197, 200, 203, 207, 210, 213, 216, 220];
+
+function cssmod(element) {
+    element.parent().children().removeClass('selected');
+    element.addClass('selected');
+};
 
 function calculateValor() {
-    if(atype == "Shield / Offhand / Ring / Cloak / Bracer / Neck") {modifier = 250};
-    if(atype == "Trinket / Belt / Shoulder / Gloves / Boots") {modifier = 400};
-    if(atype == "Helm / Legs / Chest") {modifier = 475};
-    if(atype == "1h Agi/Str Weapon") {modifier = 500};
-    if(atype == "1h Int Weapon") {modifier = 750};
-    if(atype == "2h Weapon") {modifier = 1000};
-
     stages = levelsPossible.indexOf(afterLevel) - levelsPossible.indexOf(beforeLevel)
-    if(stages > 0) {
-        final = stages * modifier;
+    if (stages > 0) {
+        final = stages * atype.get(armortype);
         $(".result").text("You need : " + final + " Valor");
+    } else {
+        $(".result").text("You can't downgrade dipshit");
     };
 };
