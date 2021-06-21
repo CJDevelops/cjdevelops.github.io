@@ -8,7 +8,8 @@ $(document).ready(function(){
         var charms = $("#input").val();
         var needed = 10000 - charms;
         var daily = Math.round(needed / daysLeft);
+        var daily2 = Math.round(needed / (daysLeft-1))
     
-        document.getElementById("needed").innerHTML = "You need " + daily + " charms a day :)";
+        document.getElementById("needed").innerHTML = "You need " + daily + " charms a day :) or " + daily2 + " not including today";
     });
 });
