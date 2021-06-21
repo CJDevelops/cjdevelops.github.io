@@ -11,3 +11,8 @@ function calculate(){
     document.getElementById("needed").innerHTML = "You need : " + daily + " charms a day :)";
 
 };
+$(document).ready(function(){
+    $("#input").on("input", function(){
+        calculate();
+    });
+});
