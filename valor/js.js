@@ -35,7 +35,20 @@ atype.set("1h Agi/Str Weapon", 500);
 atype.set("1h Int Weapon", 750);
 atype.set("2h Weapon", 1000);
 
-var levelsPossible = [184, 187, 190, 194, 197, 200, 203, 207, 210, 213, 216, 220];
+var levelsPossible = [
+210,
+213,
+216,
+220,
+223,
+226,
+229,
+233,
+236,
+239,
+242,
+246
+];
 
 function cssmod(element) {
     element.parent().children().removeClass('selected');
