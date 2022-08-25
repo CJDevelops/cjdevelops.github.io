@@ -36,18 +36,18 @@ atype.set("1h Int Weapon", 750);
 atype.set("2h Weapon", 1000);
 
 var levelsPossible = [
-210,
-213,
-216,
-220,
-223,
-226,
-229,
-233,
-236,
-239,
-242,
-246
+262,
+265,
+268,
+271,
+275,
+278,
+281,
+285,
+288,
+291,
+295,
+298
 ];
 
 function cssmod(element) {
