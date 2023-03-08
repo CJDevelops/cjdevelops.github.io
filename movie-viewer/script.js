@@ -1,4 +1,4 @@
-const mainDivs = document.querySelectorAll(".main");
+const mainDivs = document.querySelectorAll("main");
 let totalChildren = 0;
 
 mainDivs.forEach((div) => {
