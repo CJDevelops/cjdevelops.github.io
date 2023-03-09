@@ -55,7 +55,7 @@ async function searchFilms() {
 		}
 	}
 
-	// Comment
+	// Clear Search Bar and Display "Search Complete"
 	searchBar.value = "";
 	const searchComplete = document.createElement("p");
 	searchComplete.textContent = "Search Complete";
