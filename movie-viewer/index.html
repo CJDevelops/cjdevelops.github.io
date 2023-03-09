@@ -17,7 +17,12 @@
 		<meta name="theme-color" content="#ffffff" />
 	</head>
 	<body>
-		<main class="container-fluid">
+		<div class="search">
+			<input type="text" id="search-bar" placeholder="Search for a movie..." />
+			<button id="search-btn">Search</button>
+		</div>
+
+		<div class="container-fluid" id="film-directory">
 			<div>
 				<a href="pages/The Godfather (1972).html"><img src="images/The Godfather (1972).jpg" width="200px" alt="" /></a>
 				<p>The Godfather</p>
@@ -1417,7 +1422,10 @@
 				<p>Knock at the Cabin</p>
 				<p class="movie-year">2023 | 1h 40m</p>
 			</div>
-		</main>
+		</div>
+
+		<div class="container-fluid" id="search-results"></div>
 	</body>
 	<script src="script.js"></script>
+	<script src="search.js"></script>
 </html>
