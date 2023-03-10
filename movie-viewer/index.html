@@ -1,1432 +1,1335 @@
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Movie Viewer</title>
-		<link rel="stylesheet" href="css/custom.css" />
-		<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="/favicon/site.webmanifest" />
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-		<link rel="shortcut icon" href="/favicon/favicon.ico" />
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-		<meta name="theme-color" content="#ffffff" />
-	</head>
-	<body>
-		<div class="search">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie Viewer</title>
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+    		<div class="search">
 			<input type="text" id="search-bar" placeholder="Search for a movie..." />
 			<button id="search-btn">Search</button>
 			<button id="reset-btn">Reset</button>
 		</div>
-
-		<div class="container-fluid" id="film-directory">
-			<div>
-				<a href="pages/The Godfather (1972).html"><img src="images/The Godfather (1972).jpg" width="200px" alt="" /></a>
-				<p>The Godfather</p>
-				<p class="movie-year">1972 | 2h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Godfather Part 2 (1974).html"
-					><img src="images/The Godfather Part 2 (1974).jpg" width="200px" alt=""
-				/></a>
-				<p>The Godfather Part 2</p>
-				<p class="movie-year">1974 | 3h 22m</p>
-			</div>
-
-			<div>
-				<a href="pages/Alien (1979).html"><img src="images/Alien (1979).jpg" width="200px" alt="" /></a>
-				<p>Alien</p>
-				<p class="movie-year">1979 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Breakfast Club (1985).html"><img src="images/The Breakfast Club (1985).jpg" width="200px" alt="" /></a>
-				<p>The Breakfast Club</p>
-				<p class="movie-year">1985 | 1h 37m</p>
-			</div>
-
-			<div>
-				<a href="pages/Aliens (1986).html"><img src="images/Aliens (1986).jpg" width="200px" alt="" /></a>
-				<p>Aliens</p>
-				<p class="movie-year">1986 | 2h 34m</p>
-			</div>
-
-			<div>
-				<a href="pages/Predator (1987).html"><img src="images/Predator (1987).jpg" width="200px" alt="" /></a>
-				<p>Predator</p>
-				<p class="movie-year">1987 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/Predator 2 (1990).html"><img src="images/Predator 2 (1990).jpg" width="200px" alt="" /></a>
-				<p>Predator 2</p>
-				<p class="movie-year">1990 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Alien 3 (1992).html"><img src="images/Alien 3 (1992).jpg" width="200px" alt="" /></a>
-				<p>Alien 3</p>
-				<p class="movie-year">1992 | 2h 25m</p>
-			</div>
-
-			<div>
-				<a href="pages/Groundhog Day (1993).html"><img src="images/Groundhog Day (1993).jpg" width="200px" alt="" /></a>
-				<p>Groundhog Day</p>
-				<p class="movie-year">1993 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Shawshank Redemption (1994).html"
-					><img src="images/The Shawshank Redemption (1994).jpg" width="200px" alt=""
-				/></a>
-				<p>The Shawshank Redemption</p>
-				<p class="movie-year">1994 | 2h 22m</p>
-			</div>
-
-			<div>
-				<a href="pages/Alien Resurrection (1997).html"><img src="images/Alien Resurrection (1997).jpg" width="200px" alt="" /></a>
-				<p>Alien Resurrection</p>
-				<p class="movie-year">1997 | 1h 56m</p>
-			</div>
-
-			<div>
-				<a href="pages/Show Me Love (1998).html"><img src="images/Show Me Love (1998).jpg" width="200px" alt="" /></a>
-				<p>Show Me Love</p>
-				<p class="movie-year">1998 | 1h 25m</p>
-			</div>
-
-			<div>
-				<a href="pages/American Psycho (2000).html"><img src="images/American Psycho (2000).jpg" width="200px" alt="" /></a>
-				<p>American Psycho</p>
-				<p class="movie-year">2000 | 1h 42m</p>
-			</div>
-
-			<div>
-				<a href="pages/Gladiator (2000).html"><img src="images/Gladiator (2000).jpg" width="200px" alt="" /></a>
-				<p>Gladiator</p>
-				<p class="movie-year">2000 | 2h 51m</p>
-			</div>
-
-			<div>
-				<a href="pages/Memento (2000).html"><img src="images/Memento (2000).jpg" width="200px" alt="" /></a>
-				<p>Memento</p>
-				<p class="movie-year">2000 | 1h 53m</p>
-			</div>
-
-			<div>
-				<a href="pages/Requiem for a Dream (2000).html"><img src="images/Requiem for a Dream (2000).jpg" width="200px" alt="" /></a>
-				<p>Requiem for a Dream</p>
-				<p class="movie-year">2000 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Black Hawk Down (2001).html"><img src="images/Black Hawk Down (2001).jpg" width="200px" alt="" /></a>
-				<p>Black Hawk Down</p>
-				<p class="movie-year">2001 | 2h 24m</p>
-			</div>
-
-			<div>
-				<a href="pages/Donnie Darko (2001).html"><img src="images/Donnie Darko (2001).jpg" width="200px" alt="" /></a>
-				<p>Donnie Darko</p>
-				<p class="movie-year">2001 | 2h 14m</p>
-			</div>
-
-			<div>
-				<a href="pages/Enemy at the Gates (2001).html"><img src="images/Enemy at the Gates (2001).jpg" width="200px" alt="" /></a>
-				<p>Enemy at the Gates</p>
-				<p class="movie-year">2001 | 2h 11m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Philosophers Stone (2001).html"
-					><img src="images/Harry Potter and the Philosophers Stone (2001).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Philosophers Stone</p>
-				<p class="movie-year">2001 | 2h 39m</p>
-			</div>
-
-			<div>
-				<a href="pages/28 Days Later (2002).html"><img src="images/28 Days Later (2002).jpg" width="200px" alt="" /></a>
-				<p>28 Days Later</p>
-				<p class="movie-year">2002 | 1h 53m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Chamber of Secrets (2002).html"
-					><img src="images/Harry Potter and the Chamber of Secrets (2002).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Chamber of Secrets</p>
-				<p class="movie-year">2002 | 2h 54m</p>
-			</div>
-
-			<div>
-				<a href="pages/Secretary (2002).html"><img src="images/Secretary (2002).jpg" width="200px" alt="" /></a>
-				<p>Secretary</p>
-				<p class="movie-year">2002 | 1h 51m</p>
-			</div>
-
-			<div>
-				<a href="pages/Love Actually (2003).html"><img src="images/Love Actually (2003).jpg" width="200px" alt="" /></a>
-				<p>Love Actually</p>
-				<p class="movie-year">2003 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/50 First Dates (2004).html"><img src="images/50 First Dates (2004).jpg" width="200px" alt="" /></a>
-				<p>50 First Dates</p>
-				<p class="movie-year">2004 | 1h 39m</p>
-			</div>
-
-			<div>
-				<a href="pages/AVP Alien vs Predator (2004).html"
-					><img src="images/AVP Alien vs Predator (2004).jpg" width="200px" alt=""
-				/></a>
-				<p>AVP Alien vs Predator</p>
-				<p class="movie-year">2004 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/Eternal Sunshine of the Spotless Mind (2004).html"
-					><img src="images/Eternal Sunshine of the Spotless Mind (2004).jpg" width="200px" alt=""
-				/></a>
-				<p>Eternal Sunshine of the Spotless Mind</p>
-				<p class="movie-year">2004 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Prisoner of Azkaban (2004).html"
-					><img src="images/Harry Potter and the Prisoner of Azkaban (2004).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Prisoner of Azkaban</p>
-				<p class="movie-year">2004 | 2h 22m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Machinist (2004).html"><img src="images/The Machinist (2004).jpg" width="200px" alt="" /></a>
-				<p>The Machinist</p>
-				<p class="movie-year">2004 | 1h 42m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Notebook (2004).html"><img src="images/The Notebook (2004).jpg" width="200px" alt="" /></a>
-				<p>The Notebook</p>
-				<p class="movie-year">2004 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Goblet of Fire (2005).html"
-					><img src="images/Harry Potter and the Goblet of Fire (2005).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Goblet of Fire</p>
-				<p class="movie-year">2005 | 2h 37m</p>
-			</div>
-
-			<div>
-				<a href="pages/War of the Worlds (2005).html"><img src="images/War of the Worlds (2005).jpg" width="200px" alt="" /></a>
-				<p>War of the Worlds</p>
-				<p class="movie-year">2005 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/Children of Men (2006).html"><img src="images/Children of Men (2006).jpg" width="200px" alt="" /></a>
-				<p>Children of Men</p>
-				<p class="movie-year">2006 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Departed (2006).html"><img src="images/The Departed (2006).jpg" width="200px" alt="" /></a>
-				<p>The Departed</p>
-				<p class="movie-year">2006 | 2h 31m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Prestige (2006).html"><img src="images/The Prestige (2006).jpg" width="200px" alt="" /></a>
-				<p>The Prestige</p>
-				<p class="movie-year">2006 | 2h 10m</p>
-			</div>
-
-			<div>
-				<a href="pages/Aliens vs Predator Requiem (2007).html"
-					><img src="images/Aliens vs Predator Requiem (2007).jpg" width="200px" alt=""
-				/></a>
-				<p>Aliens vs Predator Requiem</p>
-				<p class="movie-year">2007 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Order of the Phoenix (2007).html"
-					><img src="images/Harry Potter and the Order of the Phoenix (2007).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Order of the Phoenix</p>
-				<p class="movie-year">2007 | 2h 18m</p>
-			</div>
-
-			<div>
-				<a href="pages/In Bruges (2008).html"><img src="images/In Bruges (2008).jpg" width="200px" alt="" /></a>
-				<p>In Bruges</p>
-				<p class="movie-year">2008 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/Iron Man (2008).html"><img src="images/Iron Man (2008).jpg" width="200px" alt="" /></a>
-				<p>Iron Man</p>
-				<p class="movie-year">2008 | 2h 6m</p>
-			</div>
-
-			<div>
-				<a href="pages/Patrik Age 15 (2008).html"><img src="images/Patrik Age 15 (2008).jpg" width="200px" alt="" /></a>
-				<p>Patrik Age 15</p>
-				<p class="movie-year">2008 | 1h 38m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Boy in the Striped Pyjamas (2008).html"
-					><img src="images/The Boy in the Striped Pyjamas (2008).jpg" width="200px" alt=""
-				/></a>
-				<p>The Boy in the Striped Pyjamas</p>
-				<p class="movie-year">2008 | 1h 34m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Incredible Hulk (2008).html"><img src="images/The Incredible Hulk (2008).jpg" width="200px" alt="" /></a>
-				<p>The Incredible Hulk</p>
-				<p class="movie-year">2008 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the HalfBlood Prince (2009).html"
-					><img src="images/Harry Potter and the HalfBlood Prince (2009).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the HalfBlood Prince</p>
-				<p class="movie-year">2009 | 2h 34m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Deathly Hallows Part 1 (2010).html"
-					><img src="images/Harry Potter and the Deathly Hallows Part 1 (2010).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Deathly Hallows Part 1</p>
-				<p class="movie-year">2010 | 2h 26m</p>
-			</div>
-
-			<div>
-				<a href="pages/Iron Man 2 (2010).html"><img src="images/Iron Man 2 (2010).jpg" width="200px" alt="" /></a>
-				<p>Iron Man 2</p>
-				<p class="movie-year">2010 | 2h 5m</p>
-			</div>
-
-			<div>
-				<a href="pages/Predators (2010).html"><img src="images/Predators (2010).jpg" width="200px" alt="" /></a>
-				<p>Predators</p>
-				<p class="movie-year">2010 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Kings Speech (2010).html"><img src="images/The Kings Speech (2010).jpg" width="200px" alt="" /></a>
-				<p>The Kings Speech</p>
-				<p class="movie-year">2010 | 1h 58m</p>
-			</div>
-
-			<div>
-				<a href="pages/Unthinkable (2010).html"><img src="images/Unthinkable (2010).jpg" width="200px" alt="" /></a>
-				<p>Unthinkable</p>
-				<p class="movie-year">2010 | 1h 37m</p>
-			</div>
-
-			<div>
-				<a href="pages/Winters Bone (2010).html"><img src="images/Winters Bone (2010).jpg" width="200px" alt="" /></a>
-				<p>Winters Bone</p>
-				<p class="movie-year">2010 | 1h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/Captain America The First Avenger (2011).html"
-					><img src="images/Captain America The First Avenger (2011).jpg" width="200px" alt=""
-				/></a>
-				<p>Captain America The First Avenger</p>
-				<p class="movie-year">2011 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/Drive (2011).html"><img src="images/Drive (2011).jpg" width="200px" alt="" /></a>
-				<p>Drive</p>
-				<p class="movie-year">2011 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter and the Deathly Hallows Part 2 (2011).html"
-					><img src="images/Harry Potter and the Deathly Hallows Part 2 (2011).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter and the Deathly Hallows Part 2</p>
-				<p class="movie-year">2011 | 2h 10m</p>
-			</div>
-
-			<div>
-				<a href="pages/Thor (2011).html"><img src="images/Thor (2011).jpg" width="200px" alt="" /></a>
-				<p>Thor</p>
-				<p class="movie-year">2011 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Les Miserables (2012).html"><img src="images/Les Miserables (2012).jpg" width="200px" alt="" /></a>
-				<p>Les Miserables</p>
-				<p class="movie-year">2012 | 2h 38m</p>
-			</div>
-
-			<div>
-				<a href="pages/Life of Pi (2012).html"><img src="images/Life of Pi (2012).jpg" width="200px" alt="" /></a>
-				<p>Life of Pi</p>
-				<p class="movie-year">2012 | 2h 7m</p>
-			</div>
-
-			<div>
-				<a href="pages/Lincoln (2012).html"><img src="images/Lincoln (2012).jpg" width="200px" alt="" /></a>
-				<p>Lincoln</p>
-				<p class="movie-year">2012 | 2h 30m</p>
-			</div>
-
-			<div>
-				<a href="pages/Prometheus (2012).html"><img src="images/Prometheus (2012).jpg" width="200px" alt="" /></a>
-				<p>Prometheus</p>
-				<p class="movie-year">2012 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Act of Killing (2012).html"><img src="images/The Act of Killing (2012).jpg" width="200px" alt="" /></a>
-				<p>The Act of Killing</p>
-				<p class="movie-year">2012 | 2h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Avengers (2012).html"><img src="images/The Avengers (2012).jpg" width="200px" alt="" /></a>
-				<p>The Avengers</p>
-				<p class="movie-year">2012 | 2h 23m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Impossible (2012).html"><img src="images/The Impossible (2012).jpg" width="200px" alt="" /></a>
-				<p>The Impossible</p>
-				<p class="movie-year">2012 | 1h 54m</p>
-			</div>
-
-			<div>
-				<a href="pages/Zero Dark Thirty (2012).html"><img src="images/Zero Dark Thirty (2012).jpg" width="200px" alt="" /></a>
-				<p>Zero Dark Thirty</p>
-				<p class="movie-year">2012 | 2h 37m</p>
-			</div>
-
-			<div>
-				<a href="pages/12 Years a Slave (2013).html"><img src="images/12 Years a Slave (2013).jpg" width="200px" alt="" /></a>
-				<p>12 Years a Slave</p>
-				<p class="movie-year">2013 | 2h 14m</p>
-			</div>
-
-			<div>
-				<a href="pages/Don Jon (2013).html"><img src="images/Don Jon (2013).jpg" width="200px" alt="" /></a>
-				<p>Don Jon</p>
-				<p class="movie-year">2013 | 1h 30m</p>
-			</div>
-
-			<div>
-				<a href="pages/Gravity (2013).html"><img src="images/Gravity (2013).jpg" width="200px" alt="" /></a>
-				<p>Gravity</p>
-				<p class="movie-year">2013 | 1h 31m</p>
-			</div>
-
-			<div>
-				<a href="pages/Iron Man 3 (2013).html"><img src="images/Iron Man 3 (2013).jpg" width="200px" alt="" /></a>
-				<p>Iron Man 3</p>
-				<p class="movie-year">2013 | 2h 11m</p>
-			</div>
-
-			<div>
-				<a href="pages/Now You See Me (2013).html"><img src="images/Now You See Me (2013).jpg" width="200px" alt="" /></a>
-				<p>Now You See Me</p>
-				<p class="movie-year">2013 | 2h 5m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Book Thief (2013).html"><img src="images/The Book Thief (2013).jpg" width="200px" alt="" /></a>
-				<p>The Book Thief</p>
-				<p class="movie-year">2013 | 2h 11m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Conjuring (2013).html"><img src="images/The Conjuring (2013).jpg" width="200px" alt="" /></a>
-				<p>The Conjuring</p>
-				<p class="movie-year">2013 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Wolf of Wall Street (2013).html"
-					><img src="images/The Wolf of Wall Street (2013).jpg" width="200px" alt=""
-				/></a>
-				<p>The Wolf of Wall Street</p>
-				<p class="movie-year">2013 | 3h 0m</p>
-			</div>
-
-			<div>
-				<a href="pages/Thor The Dark World (2013).html"><img src="images/Thor The Dark World (2013).jpg" width="200px" alt="" /></a>
-				<p>Thor The Dark World</p>
-				<p class="movie-year">2013 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/World War Z (2013).html"><img src="images/World War Z (2013).jpg" width="200px" alt="" /></a>
-				<p>World War Z</p>
-				<p class="movie-year">2013 | 2h 3m</p>
-			</div>
-
-			<div>
-				<a href="pages/American Sniper (2014).html"><img src="images/American Sniper (2014).jpg" width="200px" alt="" /></a>
-				<p>American Sniper</p>
-				<p class="movie-year">2014 | 2h 13m</p>
-			</div>
-
-			<div>
-				<a href="pages/Black Sea (2014).html"><img src="images/Black Sea (2014).jpg" width="200px" alt="" /></a>
-				<p>Black Sea</p>
-				<p class="movie-year">2014 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Captain America The Winter Soldier (2014).html"
-					><img src="images/Captain America The Winter Soldier (2014).jpg" width="200px" alt=""
-				/></a>
-				<p>Captain America The Winter Soldier</p>
-				<p class="movie-year">2014 | 2h 16m</p>
-			</div>
-
-			<div>
-				<a href="pages/Chef (2014).html"><img src="images/Chef (2014).jpg" width="200px" alt="" /></a>
-				<p>Chef</p>
-				<p class="movie-year">2014 | 1h 50m</p>
-			</div>
-
-			<div>
-				<a href="pages/Fury (2014).html"><img src="images/Fury (2014).jpg" width="200px" alt="" /></a>
-				<p>Fury</p>
-				<p class="movie-year">2014 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/Guardians of the Galaxy (2014).html"
-					><img src="images/Guardians of the Galaxy (2014).jpg" width="200px" alt=""
-				/></a>
-				<p>Guardians of the Galaxy</p>
-				<p class="movie-year">2014 | 2h 1m</p>
-			</div>
-
-			<div>
-				<a href="pages/John Wick (2014).html"><img src="images/John Wick (2014).jpg" width="200px" alt="" /></a>
-				<p>John Wick</p>
-				<p class="movie-year">2014 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Predestination (2014).html"><img src="images/Predestination (2014).jpg" width="200px" alt="" /></a>
-				<p>Predestination</p>
-				<p class="movie-year">2014 | 1h 38m</p>
-			</div>
-
-			<div>
-				<a href="pages/Selma (2014).html"><img src="images/Selma (2014).jpg" width="200px" alt="" /></a>
-				<p>Selma</p>
-				<p class="movie-year">2014 | 2h 8m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Grand Budapest Hotel (2014).html"
-					><img src="images/The Grand Budapest Hotel (2014).jpg" width="200px" alt=""
-				/></a>
-				<p>The Grand Budapest Hotel</p>
-				<p class="movie-year">2014 | 1h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Imitation Game (2014).html"><img src="images/The Imitation Game (2014).jpg" width="200px" alt="" /></a>
-				<p>The Imitation Game</p>
-				<p class="movie-year">2014 | 1h 54m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Theory of Everything (2014).html"
-					><img src="images/The Theory of Everything (2014).jpg" width="200px" alt=""
-				/></a>
-				<p>The Theory of Everything</p>
-				<p class="movie-year">2014 | 2h 3m</p>
-			</div>
-
-			<div>
-				<a href="pages/Transcendence (2014).html"><img src="images/Transcendence (2014).jpg" width="200px" alt="" /></a>
-				<p>Transcendence</p>
-				<p class="movie-year">2014 | 1h 59m</p>
-			</div>
-
-			<div>
-				<a href="pages/Unbroken (2014).html"><img src="images/Unbroken (2014).jpg" width="200px" alt="" /></a>
-				<p>Unbroken</p>
-				<p class="movie-year">2014 | 2h 17m</p>
-			</div>
-
-			<div>
-				<a href="pages/Under the Skin (2014).html"><img src="images/Under the Skin (2014).jpg" width="200px" alt="" /></a>
-				<p>Under the Skin</p>
-				<p class="movie-year">2014 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/What We Do in the Shadows (2014).html"
-					><img src="images/What We Do in the Shadows (2014).jpg" width="200px" alt=""
-				/></a>
-				<p>What We Do in the Shadows</p>
-				<p class="movie-year">2014 | 1h 25m</p>
-			</div>
-
-			<div>
-				<a href="pages/AntMan (2015).html"><img src="images/AntMan (2015).jpg" width="200px" alt="" /></a>
-				<p>AntMan</p>
-				<p class="movie-year">2015 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/Avengers Age of Ultron (2015).html"
-					><img src="images/Avengers Age of Ultron (2015).jpg" width="200px" alt=""
-				/></a>
-				<p>Avengers Age of Ultron</p>
-				<p class="movie-year">2015 | 2h 21m</p>
-			</div>
-
-			<div>
-				<a href="pages/Bridge of Spies (2015).html"><img src="images/Bridge of Spies (2015).jpg" width="200px" alt="" /></a>
-				<p>Bridge of Spies</p>
-				<p class="movie-year">2015 | 2h 21m</p>
-			</div>
-
-			<div>
-				<a href="pages/Concussion (2015).html"><img src="images/Concussion (2015).jpg" width="200px" alt="" /></a>
-				<p>Concussion</p>
-				<p class="movie-year">2015 | 2h 3m</p>
-			</div>
-
-			<div>
-				<a href="pages/Ex Machina (2015).html"><img src="images/Ex Machina (2015).jpg" width="200px" alt="" /></a>
-				<p>Ex Machina</p>
-				<p class="movie-year">2015 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Mad Max Fury Road (2015).html"><img src="images/Mad Max Fury Road (2015).jpg" width="200px" alt="" /></a>
-				<p>Mad Max Fury Road</p>
-				<p class="movie-year">2015 | 2h 0m</p>
-			</div>
-
-			<div>
-				<a href="pages/Scouts Guide to the Zombie Apocalypse (2015).html"
-					><img src="images/Scouts Guide to the Zombie Apocalypse (2015).jpg" width="200px" alt=""
-				/></a>
-				<p>Scouts Guide to the Zombie Apocalypse</p>
-				<p class="movie-year">2015 | 1h 33m</p>
-			</div>
-
-			<div>
-				<a href="pages/Suffragette (2015).html"><img src="images/Suffragette (2015).jpg" width="200px" alt="" /></a>
-				<p>Suffragette</p>
-				<p class="movie-year">2015 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Big Short (2015).html"><img src="images/The Big Short (2015).jpg" width="200px" alt="" /></a>
-				<p>The Big Short</p>
-				<p class="movie-year">2015 | 2h 10m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Lobster (2015).html"><img src="images/The Lobster (2015).jpg" width="200px" alt="" /></a>
-				<p>The Lobster</p>
-				<p class="movie-year">2015 | 1h 54m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Martian (2015).html"><img src="images/The Martian (2015).jpg" width="200px" alt="" /></a>
-				<p>The Martian</p>
-				<p class="movie-year">2015 | 2h 22m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Revenant (2015).html"><img src="images/The Revenant (2015).jpg" width="200px" alt="" /></a>
-				<p>The Revenant</p>
-				<p class="movie-year">2015 | 2h 36m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Witch (2015).html"><img src="images/The Witch (2015).jpg" width="200px" alt="" /></a>
-				<p>The Witch</p>
-				<p class="movie-year">2015 | 1h 32m</p>
-			</div>
-
-			<div>
-				<a href="pages/Arrival (2016).html"><img src="images/Arrival (2016).jpg" width="200px" alt="" /></a>
-				<p>Arrival</p>
-				<p class="movie-year">2016 | 1h 56m</p>
-			</div>
-
-			<div>
-				<a href="pages/Bastille Day (2016).html"><img src="images/Bastille Day (2016).jpg" width="200px" alt="" /></a>
-				<p>Bastille Day</p>
-				<p class="movie-year">2016 | 1h 32m</p>
-			</div>
-
-			<div>
-				<a href="pages/Captain America Civil War (2016).html"
-					><img src="images/Captain America Civil War (2016).jpg" width="200px" alt=""
-				/></a>
-				<p>Captain America Civil War</p>
-				<p class="movie-year">2016 | 2h 28m</p>
-			</div>
-
-			<div>
-				<a href="pages/Deadpool (2016).html"><img src="images/Deadpool (2016).jpg" width="200px" alt="" /></a>
-				<p>Deadpool</p>
-				<p class="movie-year">2016 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Doctor Strange (2016).html"><img src="images/Doctor Strange (2016).jpg" width="200px" alt="" /></a>
-				<p>Doctor Strange</p>
-				<p class="movie-year">2016 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Hidden Figures (2016).html"><img src="images/Hidden Figures (2016).jpg" width="200px" alt="" /></a>
-				<p>Hidden Figures</p>
-				<p class="movie-year">2016 | 2h 7m</p>
-			</div>
-
-			<div>
-				<a href="pages/Moonlight (2016).html"><img src="images/Moonlight (2016).jpg" width="200px" alt="" /></a>
-				<p>Moonlight</p>
-				<p class="movie-year">2016 | 1h 51m</p>
-			</div>
-
-			<div>
-				<a href="pages/Passengers (2016).html"><img src="images/Passengers (2016).jpg" width="200px" alt="" /></a>
-				<p>Passengers</p>
-				<p class="movie-year">2016 | 1h 56m</p>
-			</div>
-
-			<div>
-				<a href="pages/Personal Shopper (2016).html"><img src="images/Personal Shopper (2016).jpg" width="200px" alt="" /></a>
-				<p>Personal Shopper</p>
-				<p class="movie-year">2016 | 1h 45m</p>
-			</div>
-
-			<div>
-				<a href="pages/Snowden (2016).html"><img src="images/Snowden (2016).jpg" width="200px" alt="" /></a>
-				<p>Snowden</p>
-				<p class="movie-year">2016 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/Suicide Squad (2016).html"><img src="images/Suicide Squad (2016).jpg" width="200px" alt="" /></a>
-				<p>Suicide Squad</p>
-				<p class="movie-year">2016 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/Sully (2016).html"><img src="images/Sully (2016).jpg" width="200px" alt="" /></a>
-				<p>Sully</p>
-				<p class="movie-year">2016 | 1h 36m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Girl on the Train (2016).html"
-					><img src="images/The Girl on the Train (2016).jpg" width="200px" alt=""
-				/></a>
-				<p>The Girl on the Train</p>
-				<p class="movie-year">2016 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/Train to Busan (2016).html"><img src="images/Train to Busan (2016).jpg" width="200px" alt="" /></a>
-				<p>Train to Busan</p>
-				<p class="movie-year">2016 | 1h 58m</p>
-			</div>
-
-			<div>
-				<a href="pages/Zootopia (2016).html"><img src="images/Zootopia (2016).jpg" width="200px" alt="" /></a>
-				<p>Zootopia</p>
-				<p class="movie-year">2016 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/Alien Covenant (2017).html"><img src="images/Alien Covenant (2017).jpg" width="200px" alt="" /></a>
-				<p>Alien Covenant</p>
-				<p class="movie-year">2017 | 2h 2m</p>
-			</div>
-
-			<div>
-				<a href="pages/Churchill (2017).html"><img src="images/Churchill (2017).jpg" width="200px" alt="" /></a>
-				<p>Churchill</p>
-				<p class="movie-year">2017 | 1h 45m</p>
-			</div>
-
-			<div>
-				<a href="pages/Darkest Hour (2017).html"><img src="images/Darkest Hour (2017).jpg" width="200px" alt="" /></a>
-				<p>Darkest Hour</p>
-				<p class="movie-year">2017 | 2h 5m</p>
-			</div>
-
-			<div>
-				<a href="pages/Dunkirk (2017).html"><img src="images/Dunkirk (2017).jpg" width="200px" alt="" /></a>
-				<p>Dunkirk</p>
-				<p class="movie-year">2017 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/Get Out (2017).html"><img src="images/Get Out (2017).jpg" width="200px" alt="" /></a>
-				<p>Get Out</p>
-				<p class="movie-year">2017 | 1h 44m</p>
-			</div>
-
-			<div>
-				<a href="pages/Ghost in the Shell (2017).html"><img src="images/Ghost in the Shell (2017).jpg" width="200px" alt="" /></a>
-				<p>Ghost in the Shell</p>
-				<p class="movie-year">2017 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/Going in Style (2017).html"><img src="images/Going in Style (2017).jpg" width="200px" alt="" /></a>
-				<p>Going in Style</p>
-				<p class="movie-year">2017 | 1h 36m</p>
-			</div>
-
-			<div>
-				<a href="pages/Guardians of the Galaxy Vol 2 (2017).html"
-					><img src="images/Guardians of the Galaxy Vol 2 (2017).jpg" width="200px" alt=""
-				/></a>
-				<p>Guardians of the Galaxy Vol 2</p>
-				<p class="movie-year">2017 | 2h 16m</p>
-			</div>
-
-			<div>
-				<a href="pages/It (2017).html"><img src="images/It (2017).jpg" width="200px" alt="" /></a>
-				<p>It</p>
-				<p class="movie-year">2017 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/John Wick Chapter 2 (2017).html"><img src="images/John Wick Chapter 2 (2017).jpg" width="200px" alt="" /></a>
-				<p>John Wick Chapter 2</p>
-				<p class="movie-year">2017 | 2h 2m</p>
-			</div>
-
-			<div>
-				<a href="pages/King Arthur Legend of the Sword (2017).html"
-					><img src="images/King Arthur Legend of the Sword (2017).jpg" width="200px" alt=""
-				/></a>
-				<p>King Arthur Legend of the Sword</p>
-				<p class="movie-year">2017 | 2h 6m</p>
-			</div>
-
-			<div>
-				<a href="pages/Mollys Game (2017).html"><img src="images/Mollys Game (2017).jpg" width="200px" alt="" /></a>
-				<p>Mollys Game</p>
-				<p class="movie-year">2017 | 2h 21m</p>
-			</div>
-
-			<div>
-				<a href="pages/Phantom Thread (2017).html"><img src="images/Phantom Thread (2017).jpg" width="200px" alt="" /></a>
-				<p>Phantom Thread</p>
-				<p class="movie-year">2017 | 2h 10m</p>
-			</div>
-
-			<div>
-				<a href="pages/SpiderMan Homecoming (2017).html"
-					><img src="images/SpiderMan Homecoming (2017).jpg" width="200px" alt=""
-				/></a>
-				<p>SpiderMan Homecoming</p>
-				<p class="movie-year">2017 | 2h 13m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Foreigner (2017).html"><img src="images/The Foreigner (2017).jpg" width="200px" alt="" /></a>
-				<p>The Foreigner</p>
-				<p class="movie-year">2017 | 1h 54m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Shape of Water (2017).html"><img src="images/The Shape of Water (2017).jpg" width="200px" alt="" /></a>
-				<p>The Shape of Water</p>
-				<p class="movie-year">2017 | 2h 3m</p>
-			</div>
-
-			<div>
-				<a href="pages/Thor Ragnarok (2017).html"><img src="images/Thor Ragnarok (2017).jpg" width="200px" alt="" /></a>
-				<p>Thor Ragnarok</p>
-				<p class="movie-year">2017 | 2h 11m</p>
-			</div>
-
-			<div>
-				<a href="pages/You Were Never Really Here (2017).html"
-					><img src="images/You Were Never Really Here (2017).jpg" width="200px" alt=""
-				/></a>
-				<p>You Were Never Really Here</p>
-				<p class="movie-year">2017 | 1h 29m</p>
-			</div>
-
-			<div>
-				<a href="pages/A Quiet Place (2018).html"><img src="images/A Quiet Place (2018).jpg" width="200px" alt="" /></a>
-				<p>A Quiet Place</p>
-				<p class="movie-year">2018 | 1h 30m</p>
-			</div>
-
-			<div>
-				<a href="pages/AntMan and the Wasp (2018).html"><img src="images/AntMan and the Wasp (2018).jpg" width="200px" alt="" /></a>
-				<p>AntMan and the Wasp</p>
-				<p class="movie-year">2018 | 1h 58m</p>
-			</div>
-
-			<div>
-				<a href="pages/Avengers Infinity War (2018).html"
-					><img src="images/Avengers Infinity War (2018).jpg" width="200px" alt=""
-				/></a>
-				<p>Avengers Infinity War</p>
-				<p class="movie-year">2018 | 2h 29m</p>
-			</div>
-
-			<div>
-				<a href="pages/Black Panther (2018).html"><img src="images/Black Panther (2018).jpg" width="200px" alt="" /></a>
-				<p>Black Panther</p>
-				<p class="movie-year">2018 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/Deadpool 2 (2018).html"><img src="images/Deadpool 2 (2018).jpg" width="200px" alt="" /></a>
-				<p>Deadpool 2</p>
-				<p class="movie-year">2018 | 2h 14m</p>
-			</div>
-
-			<div>
-				<a href="pages/First Man (2018).html"><img src="images/First Man (2018).jpg" width="200px" alt="" /></a>
-				<p>First Man</p>
-				<p class="movie-year">2018 | 2h 21m</p>
-			</div>
-
-			<div>
-				<a href="pages/First Reformed (2018).html"><img src="images/First Reformed (2018).jpg" width="200px" alt="" /></a>
-				<p>First Reformed</p>
-				<p class="movie-year">2018 | 1h 53m</p>
-			</div>
-
-			<div>
-				<a href="pages/Game Night (2018).html"><img src="images/Game Night (2018).jpg" width="200px" alt="" /></a>
-				<p>Game Night</p>
-				<p class="movie-year">2018 | 1h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/Hereditary (2018).html"><img src="images/Hereditary (2018).jpg" width="200px" alt="" /></a>
-				<p>Hereditary</p>
-				<p class="movie-year">2018 | 2h 7m</p>
-			</div>
-
-			<div>
-				<a href="pages/On the Basis of Sex (2018).html"><img src="images/On the Basis of Sex (2018).jpg" width="200px" alt="" /></a>
-				<p>On the Basis of Sex</p>
-				<p class="movie-year">2018 | 2h 0m</p>
-			</div>
-
-			<div>
-				<a href="pages/Rampage (2018).html"><img src="images/Rampage (2018).jpg" width="200px" alt="" /></a>
-				<p>Rampage</p>
-				<p class="movie-year">2018 | 1h 47m</p>
-			</div>
-
-			<div>
-				<a href="pages/Ready Player One (2018).html"><img src="images/Ready Player One (2018).jpg" width="200px" alt="" /></a>
-				<p>Ready Player One</p>
-				<p class="movie-year">2018 | 2h 20m</p>
-			</div>
-
-			<div>
-				<a href="pages/Red Sparrow (2018).html"><img src="images/Red Sparrow (2018).jpg" width="200px" alt="" /></a>
-				<p>Red Sparrow</p>
-				<p class="movie-year">2018 | 2h 20m</p>
-			</div>
-
-			<div>
-				<a href="pages/Skyscraper (2018).html"><img src="images/Skyscraper (2018).jpg" width="200px" alt="" /></a>
-				<p>Skyscraper</p>
-				<p class="movie-year">2018 | 1h 42m</p>
-			</div>
-
-			<div>
-				<a href="pages/SpiderMan Into the SpiderVerse (2018).html"
-					><img src="images/SpiderMan Into the SpiderVerse (2018).jpg" width="200px" alt=""
-				/></a>
-				<p>SpiderMan Into the SpiderVerse</p>
-				<p class="movie-year">2018 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/Tag (2018).html"><img src="images/Tag (2018).jpg" width="200px" alt="" /></a>
-				<p>Tag</p>
-				<p class="movie-year">2018 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Predator (2018).html"><img src="images/The Predator (2018).jpg" width="200px" alt="" /></a>
-				<p>The Predator</p>
-				<p class="movie-year">2018 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Thoroughbreds (2018).html"><img src="images/Thoroughbreds (2018).jpg" width="200px" alt="" /></a>
-				<p>Thoroughbreds</p>
-				<p class="movie-year">2018 | 1h 32m</p>
-			</div>
-
-			<div>
-				<a href="pages/1917 (2019).html"><img src="images/1917 (2019).jpg" width="200px" alt="" /></a>
-				<p>1917</p>
-				<p class="movie-year">2019 | 1h 59m</p>
-			</div>
-
-			<div>
-				<a href="pages/A Beautiful Day in the Neighborhood (2019).html"
-					><img src="images/A Beautiful Day in the Neighborhood (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>A Beautiful Day in the Neighborhood</p>
-				<p class="movie-year">2019 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/Apollo 11 (2019).html"><img src="images/Apollo 11 (2019).jpg" width="200px" alt="" /></a>
-				<p>Apollo 11</p>
-				<p class="movie-year">2019 | 1h 33m</p>
-			</div>
-
-			<div>
-				<a href="pages/Armstrong (2019).html"><img src="images/Armstrong (2019).jpg" width="200px" alt="" /></a>
-				<p>Armstrong</p>
-				<p class="movie-year">2019 | 1h 43m</p>
-			</div>
-
-			<div>
-				<a href="pages/Avengers Endgame (2019).html"><img src="images/Avengers Endgame (2019).jpg" width="200px" alt="" /></a>
-				<p>Avengers Endgame</p>
-				<p class="movie-year">2019 | 3h 1m</p>
-			</div>
-
-			<div>
-				<a href="pages/Brexit The Uncivil War (2019).html"
-					><img src="images/Brexit The Uncivil War (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>Brexit The Uncivil War</p>
-				<p class="movie-year">2019 | 1h 33m</p>
-			</div>
-
-			<div>
-				<a href="pages/Can You Keep A Secret (2019).html"
-					><img src="images/Can You Keep A Secret (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>Can You Keep A Secret</p>
-				<p class="movie-year">2019 | 1h 35m</p>
-			</div>
-
-			<div>
-				<a href="pages/Captain Marvel (2019).html"><img src="images/Captain Marvel (2019).jpg" width="200px" alt="" /></a>
-				<p>Captain Marvel</p>
-				<p class="movie-year">2019 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/Gemini Man (2019).html"><img src="images/Gemini Man (2019).jpg" width="200px" alt="" /></a>
-				<p>Gemini Man</p>
-				<p class="movie-year">2019 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/Glass (2019).html"><img src="images/Glass (2019).jpg" width="200px" alt="" /></a>
-				<p>Glass</p>
-				<p class="movie-year">2019 | 2h 9m</p>
-			</div>
-
-			<div>
-				<a href="pages/It Chapter Two (2019).html"><img src="images/It Chapter Two (2019).jpg" width="200px" alt="" /></a>
-				<p>It Chapter Two</p>
-				<p class="movie-year">2019 | 2h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/John Wick Chapter 3  Parabellum (2019).html"
-					><img src="images/John Wick Chapter 3  Parabellum (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>John Wick Chapter 3 Parabellum</p>
-				<p class="movie-year">2019 | 2h 11m</p>
-			</div>
-
-			<div>
-				<a href="pages/Jojo Rabbit (2019).html"><img src="images/Jojo Rabbit (2019).jpg" width="200px" alt="" /></a>
-				<p>Jojo Rabbit</p>
-				<p class="movie-year">2019 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Joker (2019).html"><img src="images/Joker (2019).jpg" width="200px" alt="" /></a>
-				<p>Joker</p>
-				<p class="movie-year">2019 | 2h 2m</p>
-			</div>
-
-			<div>
-				<a href="pages/Just Mercy (2019).html"><img src="images/Just Mercy (2019).jpg" width="200px" alt="" /></a>
-				<p>Just Mercy</p>
-				<p class="movie-year">2019 | 2h 17m</p>
-			</div>
-
-			<div>
-				<a href="pages/Knives Out (2019).html"><img src="images/Knives Out (2019).jpg" width="200px" alt="" /></a>
-				<p>Knives Out</p>
-				<p class="movie-year">2019 | 2h 10m</p>
-			</div>
-
-			<div>
-				<a href="pages/Little Women (2019).html"><img src="images/Little Women (2019).jpg" width="200px" alt="" /></a>
-				<p>Little Women</p>
-				<p class="movie-year">2019 | 2h 15m</p>
-			</div>
-
-			<div>
-				<a href="pages/Men in Black International (2019).html"
-					><img src="images/Men in Black International (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>Men in Black International</p>
-				<p class="movie-year">2019 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Official Secrets (2019).html"><img src="images/Official Secrets (2019).jpg" width="200px" alt="" /></a>
-				<p>Official Secrets</p>
-				<p class="movie-year">2019 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/Once Upon A Time In Hollywood (2019).html"
-					><img src="images/Once Upon A Time In Hollywood (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>Once Upon A Time In Hollywood</p>
-				<p class="movie-year">2019 | 2h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Parasite (2019).html"><img src="images/Parasite (2019).jpg" width="200px" alt="" /></a>
-				<p>Parasite</p>
-				<p class="movie-year">2019 | 2h 12m</p>
-			</div>
-
-			<div>
-				<a href="pages/SpiderMan Far from Home (2019).html"
-					><img src="images/SpiderMan Far from Home (2019).jpg" width="200px" alt=""
-				/></a>
-				<p>SpiderMan Far from Home</p>
-				<p class="movie-year">2019 | 2h 9m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Courier (2019).html"><img src="images/The Courier (2019).jpg" width="200px" alt="" /></a>
-				<p>The Courier</p>
-				<p class="movie-year">2019 | 1h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Irishman (2019).html"><img src="images/The Irishman (2019).jpg" width="200px" alt="" /></a>
-				<p>The Irishman</p>
-				<p class="movie-year">2019 | 3h 29m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Lighthouse (2019).html"><img src="images/The Lighthouse (2019).jpg" width="200px" alt="" /></a>
-				<p>The Lighthouse</p>
-				<p class="movie-year">2019 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/Togo (2019).html"><img src="images/Togo (2019).jpg" width="200px" alt="" /></a>
-				<p>Togo</p>
-				<p class="movie-year">2019 | 1h 53m</p>
-			</div>
-
-			<div>
-				<a href="pages/Bloodshot (2020).html"><img src="images/Bloodshot (2020).jpg" width="200px" alt="" /></a>
-				<p>Bloodshot</p>
-				<p class="movie-year">2020 | 1h 49m</p>
-			</div>
-
-			<div>
-				<a href="pages/Emma (2020).html"><img src="images/Emma (2020).jpg" width="200px" alt="" /></a>
-				<p>Emma</p>
-				<p class="movie-year">2020 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/Hamilton (2020).html"><img src="images/Hamilton (2020).jpg" width="200px" alt="" /></a>
-				<p>Hamilton</p>
-				<p class="movie-year">2020 | 2h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/One Night in Miami (2020).html"><img src="images/One Night in Miami (2020).jpg" width="200px" alt="" /></a>
-				<p>One Night in Miami</p>
-				<p class="movie-year">2020 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Palm Springs (2020).html"><img src="images/Palm Springs (2020).jpg" width="200px" alt="" /></a>
-				<p>Palm Springs</p>
-				<p class="movie-year">2020 | 1h 30m</p>
-			</div>
-
-			<div>
-				<a href="pages/Pieces of a Woman (2020).html"><img src="images/Pieces of a Woman (2020).jpg" width="200px" alt="" /></a>
-				<p>Pieces of a Woman</p>
-				<p class="movie-year">2020 | 2h 8m</p>
-			</div>
-
-			<div>
-				<a href="pages/Tenet (2020).html"><img src="images/Tenet (2020).jpg" width="200px" alt="" /></a>
-				<p>Tenet</p>
-				<p class="movie-year">2020 | 2h 30m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Banker (2020).html"><img src="images/The Banker (2020).jpg" width="200px" alt="" /></a>
-				<p>The Banker</p>
-				<p class="movie-year">2020 | 2h 0m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Invisible Man (2020).html"><img src="images/The Invisible Man (2020).jpg" width="200px" alt="" /></a>
-				<p>The Invisible Man</p>
-				<p class="movie-year">2020 | 2h 4m</p>
-			</div>
-
-			<div>
-				<a href="pages/A Quiet Place Part 2 (2021).html"
-					><img src="images/A Quiet Place Part 2 (2021).jpg" width="200px" alt=""
-				/></a>
-				<p>A Quiet Place Part 2</p>
-				<p class="movie-year">2021 | 1h 37m</p>
-			</div>
-
-			<div>
-				<a href="pages/Black Widow (2021).html"><img src="images/Black Widow (2021).jpg" width="200px" alt="" /></a>
-				<p>Black Widow</p>
-				<p class="movie-year">2021 | 2h 14m</p>
-			</div>
-
-			<div>
-				<a href="pages/CODA (2021).html"><img src="images/CODA (2021).jpg" width="200px" alt="" /></a>
-				<p>CODA</p>
-				<p class="movie-year">2021 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/Dune (2021).html"><img src="images/Dune (2021).jpg" width="200px" alt="" /></a>
-				<p>Dune</p>
-				<p class="movie-year">2021 | 2h 35m</p>
-			</div>
-
-			<div>
-				<a href="pages/Eternals (2021).html"><img src="images/Eternals (2021).jpg" width="200px" alt="" /></a>
-				<p>Eternals</p>
-				<p class="movie-year">2021 | 2h 24m</p>
-			</div>
-
-			<div>
-				<a href="pages/Four Good Days (2021).html"><img src="images/Four Good Days (2021).jpg" width="200px" alt="" /></a>
-				<p>Four Good Days</p>
-				<p class="movie-year">2021 | 1h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Free Guy (2021).html"><img src="images/Free Guy (2021).jpg" width="200px" alt="" /></a>
-				<p>Free Guy</p>
-				<p class="movie-year">2021 | 1h 55m</p>
-			</div>
-
-			<div>
-				<a href="pages/Jungle Cruise (2021).html"><img src="images/Jungle Cruise (2021).jpg" width="200px" alt="" /></a>
-				<p>Jungle Cruise</p>
-				<p class="movie-year">2021 | 2h 7m</p>
-			</div>
-
-			<div>
-				<a href="pages/Last Night in Soho (2021).html"><img src="images/Last Night in Soho (2021).jpg" width="200px" alt="" /></a>
-				<p>Last Night in Soho</p>
-				<p class="movie-year">2021 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/Old (2021).html"><img src="images/Old (2021).jpg" width="200px" alt="" /></a>
-				<p>Old</p>
-				<p class="movie-year">2021 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/ShangChi and the Legend of the Ten Rings (2021).html"
-					><img src="images/ShangChi and the Legend of the Ten Rings (2021).jpg" width="200px" alt=""
-				/></a>
-				<p>ShangChi and the Legend of the Ten Rings</p>
-				<p class="movie-year">2021 | 2h 12m</p>
-			</div>
-
-			<div>
-				<a href="pages/Sing 2 (2021).html"><img src="images/Sing 2 (2021).jpg" width="200px" alt="" /></a>
-				<p>Sing 2</p>
-				<p class="movie-year">2021 | 1h 50m</p>
-			</div>
-
-			<div>
-				<a href="pages/Spencer (2021).html"><img src="images/Spencer (2021).jpg" width="200px" alt="" /></a>
-				<p>Spencer</p>
-				<p class="movie-year">2021 | 1h 57m</p>
-			</div>
-
-			<div>
-				<a href="pages/SpiderMan No Way Home (2021).html"
-					><img src="images/SpiderMan No Way Home (2021).jpg" width="200px" alt=""
-				/></a>
-				<p>SpiderMan No Way Home</p>
-				<p class="movie-year">2021 | 2h 28m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Fallout (2021).html"><img src="images/The Fallout (2021).jpg" width="200px" alt="" /></a>
-				<p>The Fallout</p>
-				<p class="movie-year">2021 | 1h 36m</p>
-			</div>
-
-			<div>
-				<a href="pages/Wrath of Man (2021).html"><img src="images/Wrath of Man (2021).jpg" width="200px" alt="" /></a>
-				<p>Wrath of Man</p>
-				<p class="movie-year">2021 | 1h 58m</p>
-			</div>
-
-			<div>
-				<a href="pages/Zack Snyders Justice League (2021).html"
-					><img src="images/Zack Snyders Justice League (2021).jpg" width="200px" alt=""
-				/></a>
-				<p>Zack Snyders Justice League</p>
-				<p class="movie-year">2021 | 4h 2m</p>
-			</div>
-
-			<div>
-				<a href="pages/Black Panther Wakanda Forever (2022).html"
-					><img src="images/Black Panther Wakanda Forever (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Black Panther Wakanda Forever</p>
-				<p class="movie-year">2022 | 2h 41m</p>
-			</div>
-
-			<div>
-				<a href="pages/Doctor Strange in the Multiverse of Madness (2022).html"
-					><img src="images/Doctor Strange in the Multiverse of Madness (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Doctor Strange in the Multiverse of Madness</p>
-				<p class="movie-year">2022 | 2h 7m</p>
-			</div>
-
-			<div>
-				<a href="pages/Everything Everywhere All at Once (2022).html"
-					><img src="images/Everything Everywhere All at Once (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Everything Everywhere All at Once</p>
-				<p class="movie-year">2022 | 2h 19m</p>
-			</div>
-
-			<div>
-				<a href="pages/Glass Onion A Knives Out Mystery (2022).html"
-					><img src="images/Glass Onion A Knives Out Mystery (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Glass Onion A Knives Out Mystery</p>
-				<p class="movie-year">2022 | 2h 21m</p>
-			</div>
-
-			<div>
-				<a href="pages/Harry Potter 20th Anniversary Return to Hogwarts (2022).html"
-					><img src="images/Harry Potter 20th Anniversary Return to Hogwarts (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Harry Potter 20th Anniversary Return to Hogwarts</p>
-				<p class="movie-year">2022 | 1h 43m</p>
-			</div>
-
-			<div>
-				<a href="pages/Mr Harrigans Phone (2022).html"><img src="images/Mr Harrigans Phone (2022).jpg" width="200px" alt="" /></a>
-				<p>Mr Harrigans Phone</p>
-				<p class="movie-year">2022 | 1h 46m</p>
-			</div>
-
-			<div>
-				<a href="pages/Prey (2022).html"><img src="images/Prey (2022).jpg" width="200px" alt="" /></a>
-				<p>Prey</p>
-				<p class="movie-year">2022 | 1h 40m</p>
-			</div>
-
-			<div>
-				<a href="pages/Rogue Agent (2022).html"><img src="images/Rogue Agent (2022).jpg" width="200px" alt="" /></a>
-				<p>Rogue Agent</p>
-				<p class="movie-year">2022 | 1h 56m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Good Nurse (2022).html"><img src="images/The Good Nurse (2022).jpg" width="200px" alt="" /></a>
-				<p>The Good Nurse</p>
-				<p class="movie-year">2022 | 2h 3m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Lost City (2022).html"><img src="images/The Lost City (2022).jpg" width="200px" alt="" /></a>
-				<p>The Lost City</p>
-				<p class="movie-year">2022 | 1h 52m</p>
-			</div>
-
-			<div>
-				<a href="pages/The Wonder (2022).html"><img src="images/The Wonder (2022).jpg" width="200px" alt="" /></a>
-				<p>The Wonder</p>
-				<p class="movie-year">2022 | 1h 50m</p>
-			</div>
-
-			<div>
-				<a href="pages/Thor Love and Thunder (2022).html"
-					><img src="images/Thor Love and Thunder (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Thor Love and Thunder</p>
-				<p class="movie-year">2022 | 1h 59m</p>
-			</div>
-
-			<div>
-				<a href="pages/Weird The Al Yankovic Story (2022).html"
-					><img src="images/Weird The Al Yankovic Story (2022).jpg" width="200px" alt=""
-				/></a>
-				<p>Weird The Al Yankovic Story</p>
-				<p class="movie-year">2022 | 1h 48m</p>
-			</div>
-
-			<div>
-				<a href="pages/Knock at the Cabin (2023).html"><img src="images/Knock at the Cabin (2023).jpg" width="200px" alt="" /></a>
-				<p>Knock at the Cabin</p>
-				<p class="movie-year">2023 | 1h 40m</p>
-			</div>
+        <div class="container-fluid" id="film-directory">
+
+    <div>
+		<a href="pages/The Godfather (1972).html"><img src="images/The Godfather (1972).jpg" width="200px" alt="" /></a>
+		<p>The Godfather</p>
+        <p class="movie-year">1972 | 2h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Godfather Part 2 (1974).html"><img src="images/The Godfather Part 2 (1974).jpg" width="200px" alt="" /></a>
+		<p>The Godfather Part 2</p>
+        <p class="movie-year">1974 | 3h 22m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Alien (1979).html"><img src="images/Alien (1979).jpg" width="200px" alt="" /></a>
+		<p>Alien</p>
+        <p class="movie-year">1979 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Breakfast Club (1985).html"><img src="images/The Breakfast Club (1985).jpg" width="200px" alt="" /></a>
+		<p>The Breakfast Club</p>
+        <p class="movie-year">1985 | 1h 37m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Aliens (1986).html"><img src="images/Aliens (1986).jpg" width="200px" alt="" /></a>
+		<p>Aliens</p>
+        <p class="movie-year">1986 | 2h 34m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Predator (1987).html"><img src="images/Predator (1987).jpg" width="200px" alt="" /></a>
+		<p>Predator</p>
+        <p class="movie-year">1987 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Predator 2 (1990).html"><img src="images/Predator 2 (1990).jpg" width="200px" alt="" /></a>
+		<p>Predator 2</p>
+        <p class="movie-year">1990 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Alien 3 (1992).html"><img src="images/Alien 3 (1992).jpg" width="200px" alt="" /></a>
+		<p>Alien 3</p>
+        <p class="movie-year">1992 | 2h 25m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Groundhog Day (1993).html"><img src="images/Groundhog Day (1993).jpg" width="200px" alt="" /></a>
+		<p>Groundhog Day</p>
+        <p class="movie-year">1993 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Shawshank Redemption (1994).html"><img src="images/The Shawshank Redemption (1994).jpg" width="200px" alt="" /></a>
+		<p>The Shawshank Redemption</p>
+        <p class="movie-year">1994 | 2h 22m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Alien Resurrection (1997).html"><img src="images/Alien Resurrection (1997).jpg" width="200px" alt="" /></a>
+		<p>Alien Resurrection</p>
+        <p class="movie-year">1997 | 1h 56m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Show Me Love (1998).html"><img src="images/Show Me Love (1998).jpg" width="200px" alt="" /></a>
+		<p>Show Me Love</p>
+        <p class="movie-year">1998 | 1h 25m</p>
+	</div>
+    
+    <div>
+		<a href="pages/American Psycho (2000).html"><img src="images/American Psycho (2000).jpg" width="200px" alt="" /></a>
+		<p>American Psycho</p>
+        <p class="movie-year">2000 | 1h 42m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Gladiator (2000).html"><img src="images/Gladiator (2000).jpg" width="200px" alt="" /></a>
+		<p>Gladiator</p>
+        <p class="movie-year">2000 | 2h 51m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Memento (2000).html"><img src="images/Memento (2000).jpg" width="200px" alt="" /></a>
+		<p>Memento</p>
+        <p class="movie-year">2000 | 1h 53m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Requiem for a Dream (2000).html"><img src="images/Requiem for a Dream (2000).jpg" width="200px" alt="" /></a>
+		<p>Requiem for a Dream</p>
+        <p class="movie-year">2000 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Black Hawk Down (2001).html"><img src="images/Black Hawk Down (2001).jpg" width="200px" alt="" /></a>
+		<p>Black Hawk Down</p>
+        <p class="movie-year">2001 | 2h 24m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Donnie Darko (2001).html"><img src="images/Donnie Darko (2001).jpg" width="200px" alt="" /></a>
+		<p>Donnie Darko</p>
+        <p class="movie-year">2001 | 2h 14m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Enemy at the Gates (2001).html"><img src="images/Enemy at the Gates (2001).jpg" width="200px" alt="" /></a>
+		<p>Enemy at the Gates</p>
+        <p class="movie-year">2001 | 2h 11m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Philosophers Stone (2001).html"><img src="images/Harry Potter and the Philosophers Stone (2001).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Philosophers Stone</p>
+        <p class="movie-year">2001 | 2h 39m</p>
+	</div>
+    
+    <div>
+		<a href="pages/28 Days Later (2002).html"><img src="images/28 Days Later (2002).jpg" width="200px" alt="" /></a>
+		<p>28 Days Later</p>
+        <p class="movie-year">2002 | 1h 53m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Chamber of Secrets (2002).html"><img src="images/Harry Potter and the Chamber of Secrets (2002).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Chamber of Secrets</p>
+        <p class="movie-year">2002 | 2h 54m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Secretary (2002).html"><img src="images/Secretary (2002).jpg" width="200px" alt="" /></a>
+		<p>Secretary</p>
+        <p class="movie-year">2002 | 1h 51m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Love Actually (2003).html"><img src="images/Love Actually (2003).jpg" width="200px" alt="" /></a>
+		<p>Love Actually</p>
+        <p class="movie-year">2003 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/50 First Dates (2004).html"><img src="images/50 First Dates (2004).jpg" width="200px" alt="" /></a>
+		<p>50 First Dates</p>
+        <p class="movie-year">2004 | 1h 39m</p>
+	</div>
+    
+    <div>
+		<a href="pages/AVP Alien vs Predator (2004).html"><img src="images/AVP Alien vs Predator (2004).jpg" width="200px" alt="" /></a>
+		<p>AVP Alien vs Predator</p>
+        <p class="movie-year">2004 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Eternal Sunshine of the Spotless Mind (2004).html"><img src="images/Eternal Sunshine of the Spotless Mind (2004).jpg" width="200px" alt="" /></a>
+		<p>Eternal Sunshine of the Spotless Mind</p>
+        <p class="movie-year">2004 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Prisoner of Azkaban (2004).html"><img src="images/Harry Potter and the Prisoner of Azkaban (2004).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Prisoner of Azkaban</p>
+        <p class="movie-year">2004 | 2h 22m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Machinist (2004).html"><img src="images/The Machinist (2004).jpg" width="200px" alt="" /></a>
+		<p>The Machinist</p>
+        <p class="movie-year">2004 | 1h 42m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Notebook (2004).html"><img src="images/The Notebook (2004).jpg" width="200px" alt="" /></a>
+		<p>The Notebook</p>
+        <p class="movie-year">2004 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Goblet of Fire (2005).html"><img src="images/Harry Potter and the Goblet of Fire (2005).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Goblet of Fire</p>
+        <p class="movie-year">2005 | 2h 37m</p>
+	</div>
+    
+    <div>
+		<a href="pages/War of the Worlds (2005).html"><img src="images/War of the Worlds (2005).jpg" width="200px" alt="" /></a>
+		<p>War of the Worlds</p>
+        <p class="movie-year">2005 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Children of Men (2006).html"><img src="images/Children of Men (2006).jpg" width="200px" alt="" /></a>
+		<p>Children of Men</p>
+        <p class="movie-year">2006 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Departed (2006).html"><img src="images/The Departed (2006).jpg" width="200px" alt="" /></a>
+		<p>The Departed</p>
+        <p class="movie-year">2006 | 2h 31m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Prestige (2006).html"><img src="images/The Prestige (2006).jpg" width="200px" alt="" /></a>
+		<p>The Prestige</p>
+        <p class="movie-year">2006 | 2h 10m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Aliens vs Predator Requiem (2007).html"><img src="images/Aliens vs Predator Requiem (2007).jpg" width="200px" alt="" /></a>
+		<p>Aliens vs Predator Requiem</p>
+        <p class="movie-year">2007 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Order of the Phoenix (2007).html"><img src="images/Harry Potter and the Order of the Phoenix (2007).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Order of the Phoenix</p>
+        <p class="movie-year">2007 | 2h 18m</p>
+	</div>
+    
+    <div>
+		<a href="pages/In Bruges (2008).html"><img src="images/In Bruges (2008).jpg" width="200px" alt="" /></a>
+		<p>In Bruges</p>
+        <p class="movie-year">2008 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Iron Man (2008).html"><img src="images/Iron Man (2008).jpg" width="200px" alt="" /></a>
+		<p>Iron Man</p>
+        <p class="movie-year">2008 | 2h 6m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Patrik Age 15 (2008).html"><img src="images/Patrik Age 15 (2008).jpg" width="200px" alt="" /></a>
+		<p>Patrik Age 15</p>
+        <p class="movie-year">2008 | 1h 38m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Boy in the Striped Pyjamas (2008).html"><img src="images/The Boy in the Striped Pyjamas (2008).jpg" width="200px" alt="" /></a>
+		<p>The Boy in the Striped Pyjamas</p>
+        <p class="movie-year">2008 | 1h 34m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Incredible Hulk (2008).html"><img src="images/The Incredible Hulk (2008).jpg" width="200px" alt="" /></a>
+		<p>The Incredible Hulk</p>
+        <p class="movie-year">2008 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the HalfBlood Prince (2009).html"><img src="images/Harry Potter and the HalfBlood Prince (2009).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the HalfBlood Prince</p>
+        <p class="movie-year">2009 | 2h 34m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Deathly Hallows Part 1 (2010).html"><img src="images/Harry Potter and the Deathly Hallows Part 1 (2010).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Deathly Hallows Part 1</p>
+        <p class="movie-year">2010 | 2h 26m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Iron Man 2 (2010).html"><img src="images/Iron Man 2 (2010).jpg" width="200px" alt="" /></a>
+		<p>Iron Man 2</p>
+        <p class="movie-year">2010 | 2h 5m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Predators (2010).html"><img src="images/Predators (2010).jpg" width="200px" alt="" /></a>
+		<p>Predators</p>
+        <p class="movie-year">2010 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Kings Speech (2010).html"><img src="images/The Kings Speech (2010).jpg" width="200px" alt="" /></a>
+		<p>The Kings Speech</p>
+        <p class="movie-year">2010 | 1h 58m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Unthinkable (2010).html"><img src="images/Unthinkable (2010).jpg" width="200px" alt="" /></a>
+		<p>Unthinkable</p>
+        <p class="movie-year">2010 | 1h 37m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Winters Bone (2010).html"><img src="images/Winters Bone (2010).jpg" width="200px" alt="" /></a>
+		<p>Winters Bone</p>
+        <p class="movie-year">2010 | 1h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Captain America The First Avenger (2011).html"><img src="images/Captain America The First Avenger (2011).jpg" width="200px" alt="" /></a>
+		<p>Captain America The First Avenger</p>
+        <p class="movie-year">2011 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Drive (2011).html"><img src="images/Drive (2011).jpg" width="200px" alt="" /></a>
+		<p>Drive</p>
+        <p class="movie-year">2011 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter and the Deathly Hallows Part 2 (2011).html"><img src="images/Harry Potter and the Deathly Hallows Part 2 (2011).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter and the Deathly Hallows Part 2</p>
+        <p class="movie-year">2011 | 2h 10m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Thor (2011).html"><img src="images/Thor (2011).jpg" width="200px" alt="" /></a>
+		<p>Thor</p>
+        <p class="movie-year">2011 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Les Miserables (2012).html"><img src="images/Les Miserables (2012).jpg" width="200px" alt="" /></a>
+		<p>Les Miserables</p>
+        <p class="movie-year">2012 | 2h 38m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Life of Pi (2012).html"><img src="images/Life of Pi (2012).jpg" width="200px" alt="" /></a>
+		<p>Life of Pi</p>
+        <p class="movie-year">2012 | 2h 7m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Lincoln (2012).html"><img src="images/Lincoln (2012).jpg" width="200px" alt="" /></a>
+		<p>Lincoln</p>
+        <p class="movie-year">2012 | 2h 30m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Prometheus (2012).html"><img src="images/Prometheus (2012).jpg" width="200px" alt="" /></a>
+		<p>Prometheus</p>
+        <p class="movie-year">2012 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Act of Killing (2012).html"><img src="images/The Act of Killing (2012).jpg" width="200px" alt="" /></a>
+		<p>The Act of Killing</p>
+        <p class="movie-year">2012 | 2h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Avengers (2012).html"><img src="images/The Avengers (2012).jpg" width="200px" alt="" /></a>
+		<p>The Avengers</p>
+        <p class="movie-year">2012 | 2h 23m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Impossible (2012).html"><img src="images/The Impossible (2012).jpg" width="200px" alt="" /></a>
+		<p>The Impossible</p>
+        <p class="movie-year">2012 | 1h 54m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Zero Dark Thirty (2012).html"><img src="images/Zero Dark Thirty (2012).jpg" width="200px" alt="" /></a>
+		<p>Zero Dark Thirty</p>
+        <p class="movie-year">2012 | 2h 37m</p>
+	</div>
+    
+    <div>
+		<a href="pages/12 Years a Slave (2013).html"><img src="images/12 Years a Slave (2013).jpg" width="200px" alt="" /></a>
+		<p>12 Years a Slave</p>
+        <p class="movie-year">2013 | 2h 14m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Don Jon (2013).html"><img src="images/Don Jon (2013).jpg" width="200px" alt="" /></a>
+		<p>Don Jon</p>
+        <p class="movie-year">2013 | 1h 30m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Gravity (2013).html"><img src="images/Gravity (2013).jpg" width="200px" alt="" /></a>
+		<p>Gravity</p>
+        <p class="movie-year">2013 | 1h 31m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Iron Man 3 (2013).html"><img src="images/Iron Man 3 (2013).jpg" width="200px" alt="" /></a>
+		<p>Iron Man 3</p>
+        <p class="movie-year">2013 | 2h 11m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Now You See Me (2013).html"><img src="images/Now You See Me (2013).jpg" width="200px" alt="" /></a>
+		<p>Now You See Me</p>
+        <p class="movie-year">2013 | 2h 5m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Book Thief (2013).html"><img src="images/The Book Thief (2013).jpg" width="200px" alt="" /></a>
+		<p>The Book Thief</p>
+        <p class="movie-year">2013 | 2h 11m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Conjuring (2013).html"><img src="images/The Conjuring (2013).jpg" width="200px" alt="" /></a>
+		<p>The Conjuring</p>
+        <p class="movie-year">2013 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Wolf of Wall Street (2013).html"><img src="images/The Wolf of Wall Street (2013).jpg" width="200px" alt="" /></a>
+		<p>The Wolf of Wall Street</p>
+        <p class="movie-year">2013 | 3h 0m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Thor The Dark World (2013).html"><img src="images/Thor The Dark World (2013).jpg" width="200px" alt="" /></a>
+		<p>Thor The Dark World</p>
+        <p class="movie-year">2013 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/World War Z (2013).html"><img src="images/World War Z (2013).jpg" width="200px" alt="" /></a>
+		<p>World War Z</p>
+        <p class="movie-year">2013 | 2h 3m</p>
+	</div>
+    
+    <div>
+		<a href="pages/American Sniper (2014).html"><img src="images/American Sniper (2014).jpg" width="200px" alt="" /></a>
+		<p>American Sniper</p>
+        <p class="movie-year">2014 | 2h 13m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Black Sea (2014).html"><img src="images/Black Sea (2014).jpg" width="200px" alt="" /></a>
+		<p>Black Sea</p>
+        <p class="movie-year">2014 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Captain America The Winter Soldier (2014).html"><img src="images/Captain America The Winter Soldier (2014).jpg" width="200px" alt="" /></a>
+		<p>Captain America The Winter Soldier</p>
+        <p class="movie-year">2014 | 2h 16m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Chef (2014).html"><img src="images/Chef (2014).jpg" width="200px" alt="" /></a>
+		<p>Chef</p>
+        <p class="movie-year">2014 | 1h 50m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Fury (2014).html"><img src="images/Fury (2014).jpg" width="200px" alt="" /></a>
+		<p>Fury</p>
+        <p class="movie-year">2014 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Guardians of the Galaxy (2014).html"><img src="images/Guardians of the Galaxy (2014).jpg" width="200px" alt="" /></a>
+		<p>Guardians of the Galaxy</p>
+        <p class="movie-year">2014 | 2h 1m</p>
+	</div>
+    
+    <div>
+		<a href="pages/John Wick (2014).html"><img src="images/John Wick (2014).jpg" width="200px" alt="" /></a>
+		<p>John Wick</p>
+        <p class="movie-year">2014 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Predestination (2014).html"><img src="images/Predestination (2014).jpg" width="200px" alt="" /></a>
+		<p>Predestination</p>
+        <p class="movie-year">2014 | 1h 38m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Selma (2014).html"><img src="images/Selma (2014).jpg" width="200px" alt="" /></a>
+		<p>Selma</p>
+        <p class="movie-year">2014 | 2h 8m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Grand Budapest Hotel (2014).html"><img src="images/The Grand Budapest Hotel (2014).jpg" width="200px" alt="" /></a>
+		<p>The Grand Budapest Hotel</p>
+        <p class="movie-year">2014 | 1h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Imitation Game (2014).html"><img src="images/The Imitation Game (2014).jpg" width="200px" alt="" /></a>
+		<p>The Imitation Game</p>
+        <p class="movie-year">2014 | 1h 54m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Theory of Everything (2014).html"><img src="images/The Theory of Everything (2014).jpg" width="200px" alt="" /></a>
+		<p>The Theory of Everything</p>
+        <p class="movie-year">2014 | 2h 3m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Transcendence (2014).html"><img src="images/Transcendence (2014).jpg" width="200px" alt="" /></a>
+		<p>Transcendence</p>
+        <p class="movie-year">2014 | 1h 59m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Unbroken (2014).html"><img src="images/Unbroken (2014).jpg" width="200px" alt="" /></a>
+		<p>Unbroken</p>
+        <p class="movie-year">2014 | 2h 17m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Under the Skin (2014).html"><img src="images/Under the Skin (2014).jpg" width="200px" alt="" /></a>
+		<p>Under the Skin</p>
+        <p class="movie-year">2014 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/What We Do in the Shadows (2014).html"><img src="images/What We Do in the Shadows (2014).jpg" width="200px" alt="" /></a>
+		<p>What We Do in the Shadows</p>
+        <p class="movie-year">2014 | 1h 25m</p>
+	</div>
+    
+    <div>
+		<a href="pages/AntMan (2015).html"><img src="images/AntMan (2015).jpg" width="200px" alt="" /></a>
+		<p>AntMan</p>
+        <p class="movie-year">2015 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Avengers Age of Ultron (2015).html"><img src="images/Avengers Age of Ultron (2015).jpg" width="200px" alt="" /></a>
+		<p>Avengers Age of Ultron</p>
+        <p class="movie-year">2015 | 2h 21m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Bridge of Spies (2015).html"><img src="images/Bridge of Spies (2015).jpg" width="200px" alt="" /></a>
+		<p>Bridge of Spies</p>
+        <p class="movie-year">2015 | 2h 21m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Concussion (2015).html"><img src="images/Concussion (2015).jpg" width="200px" alt="" /></a>
+		<p>Concussion</p>
+        <p class="movie-year">2015 | 2h 3m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Ex Machina (2015).html"><img src="images/Ex Machina (2015).jpg" width="200px" alt="" /></a>
+		<p>Ex Machina</p>
+        <p class="movie-year">2015 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Mad Max Fury Road (2015).html"><img src="images/Mad Max Fury Road (2015).jpg" width="200px" alt="" /></a>
+		<p>Mad Max Fury Road</p>
+        <p class="movie-year">2015 | 2h 0m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Scouts Guide to the Zombie Apocalypse (2015).html"><img src="images/Scouts Guide to the Zombie Apocalypse (2015).jpg" width="200px" alt="" /></a>
+		<p>Scouts Guide to the Zombie Apocalypse</p>
+        <p class="movie-year">2015 | 1h 33m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Suffragette (2015).html"><img src="images/Suffragette (2015).jpg" width="200px" alt="" /></a>
+		<p>Suffragette</p>
+        <p class="movie-year">2015 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Big Short (2015).html"><img src="images/The Big Short (2015).jpg" width="200px" alt="" /></a>
+		<p>The Big Short</p>
+        <p class="movie-year">2015 | 2h 10m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Lobster (2015).html"><img src="images/The Lobster (2015).jpg" width="200px" alt="" /></a>
+		<p>The Lobster</p>
+        <p class="movie-year">2015 | 1h 54m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Martian (2015).html"><img src="images/The Martian (2015).jpg" width="200px" alt="" /></a>
+		<p>The Martian</p>
+        <p class="movie-year">2015 | 2h 22m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Revenant (2015).html"><img src="images/The Revenant (2015).jpg" width="200px" alt="" /></a>
+		<p>The Revenant</p>
+        <p class="movie-year">2015 | 2h 36m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Witch (2015).html"><img src="images/The Witch (2015).jpg" width="200px" alt="" /></a>
+		<p>The Witch</p>
+        <p class="movie-year">2015 | 1h 32m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Arrival (2016).html"><img src="images/Arrival (2016).jpg" width="200px" alt="" /></a>
+		<p>Arrival</p>
+        <p class="movie-year">2016 | 1h 56m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Bastille Day (2016).html"><img src="images/Bastille Day (2016).jpg" width="200px" alt="" /></a>
+		<p>Bastille Day</p>
+        <p class="movie-year">2016 | 1h 32m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Captain America Civil War (2016).html"><img src="images/Captain America Civil War (2016).jpg" width="200px" alt="" /></a>
+		<p>Captain America Civil War</p>
+        <p class="movie-year">2016 | 2h 28m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Deadpool (2016).html"><img src="images/Deadpool (2016).jpg" width="200px" alt="" /></a>
+		<p>Deadpool</p>
+        <p class="movie-year">2016 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Doctor Strange (2016).html"><img src="images/Doctor Strange (2016).jpg" width="200px" alt="" /></a>
+		<p>Doctor Strange</p>
+        <p class="movie-year">2016 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Hidden Figures (2016).html"><img src="images/Hidden Figures (2016).jpg" width="200px" alt="" /></a>
+		<p>Hidden Figures</p>
+        <p class="movie-year">2016 | 2h 7m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Moonlight (2016).html"><img src="images/Moonlight (2016).jpg" width="200px" alt="" /></a>
+		<p>Moonlight</p>
+        <p class="movie-year">2016 | 1h 51m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Passengers (2016).html"><img src="images/Passengers (2016).jpg" width="200px" alt="" /></a>
+		<p>Passengers</p>
+        <p class="movie-year">2016 | 1h 56m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Personal Shopper (2016).html"><img src="images/Personal Shopper (2016).jpg" width="200px" alt="" /></a>
+		<p>Personal Shopper</p>
+        <p class="movie-year">2016 | 1h 45m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Snowden (2016).html"><img src="images/Snowden (2016).jpg" width="200px" alt="" /></a>
+		<p>Snowden</p>
+        <p class="movie-year">2016 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Suicide Squad (2016).html"><img src="images/Suicide Squad (2016).jpg" width="200px" alt="" /></a>
+		<p>Suicide Squad</p>
+        <p class="movie-year">2016 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Sully (2016).html"><img src="images/Sully (2016).jpg" width="200px" alt="" /></a>
+		<p>Sully</p>
+        <p class="movie-year">2016 | 1h 36m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Girl on the Train (2016).html"><img src="images/The Girl on the Train (2016).jpg" width="200px" alt="" /></a>
+		<p>The Girl on the Train</p>
+        <p class="movie-year">2016 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Train to Busan (2016).html"><img src="images/Train to Busan (2016).jpg" width="200px" alt="" /></a>
+		<p>Train to Busan</p>
+        <p class="movie-year">2016 | 1h 58m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Zootopia (2016).html"><img src="images/Zootopia (2016).jpg" width="200px" alt="" /></a>
+		<p>Zootopia</p>
+        <p class="movie-year">2016 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Alien Covenant (2017).html"><img src="images/Alien Covenant (2017).jpg" width="200px" alt="" /></a>
+		<p>Alien Covenant</p>
+        <p class="movie-year">2017 | 2h 2m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Churchill (2017).html"><img src="images/Churchill (2017).jpg" width="200px" alt="" /></a>
+		<p>Churchill</p>
+        <p class="movie-year">2017 | 1h 45m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Darkest Hour (2017).html"><img src="images/Darkest Hour (2017).jpg" width="200px" alt="" /></a>
+		<p>Darkest Hour</p>
+        <p class="movie-year">2017 | 2h 5m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Dunkirk (2017).html"><img src="images/Dunkirk (2017).jpg" width="200px" alt="" /></a>
+		<p>Dunkirk</p>
+        <p class="movie-year">2017 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Get Out (2017).html"><img src="images/Get Out (2017).jpg" width="200px" alt="" /></a>
+		<p>Get Out</p>
+        <p class="movie-year">2017 | 1h 44m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Ghost in the Shell (2017).html"><img src="images/Ghost in the Shell (2017).jpg" width="200px" alt="" /></a>
+		<p>Ghost in the Shell</p>
+        <p class="movie-year">2017 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Going in Style (2017).html"><img src="images/Going in Style (2017).jpg" width="200px" alt="" /></a>
+		<p>Going in Style</p>
+        <p class="movie-year">2017 | 1h 36m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Guardians of the Galaxy Vol 2 (2017).html"><img src="images/Guardians of the Galaxy Vol 2 (2017).jpg" width="200px" alt="" /></a>
+		<p>Guardians of the Galaxy Vol 2</p>
+        <p class="movie-year">2017 | 2h 16m</p>
+	</div>
+    
+    <div>
+		<a href="pages/It (2017).html"><img src="images/It (2017).jpg" width="200px" alt="" /></a>
+		<p>It</p>
+        <p class="movie-year">2017 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/John Wick Chapter 2 (2017).html"><img src="images/John Wick Chapter 2 (2017).jpg" width="200px" alt="" /></a>
+		<p>John Wick Chapter 2</p>
+        <p class="movie-year">2017 | 2h 2m</p>
+	</div>
+    
+    <div>
+		<a href="pages/King Arthur Legend of the Sword (2017).html"><img src="images/King Arthur Legend of the Sword (2017).jpg" width="200px" alt="" /></a>
+		<p>King Arthur Legend of the Sword</p>
+        <p class="movie-year">2017 | 2h 6m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Mollys Game (2017).html"><img src="images/Mollys Game (2017).jpg" width="200px" alt="" /></a>
+		<p>Mollys Game</p>
+        <p class="movie-year">2017 | 2h 21m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Phantom Thread (2017).html"><img src="images/Phantom Thread (2017).jpg" width="200px" alt="" /></a>
+		<p>Phantom Thread</p>
+        <p class="movie-year">2017 | 2h 10m</p>
+	</div>
+    
+    <div>
+		<a href="pages/SpiderMan Homecoming (2017).html"><img src="images/SpiderMan Homecoming (2017).jpg" width="200px" alt="" /></a>
+		<p>SpiderMan Homecoming</p>
+        <p class="movie-year">2017 | 2h 13m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Foreigner (2017).html"><img src="images/The Foreigner (2017).jpg" width="200px" alt="" /></a>
+		<p>The Foreigner</p>
+        <p class="movie-year">2017 | 1h 54m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Shape of Water (2017).html"><img src="images/The Shape of Water (2017).jpg" width="200px" alt="" /></a>
+		<p>The Shape of Water</p>
+        <p class="movie-year">2017 | 2h 3m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Thor Ragnarok (2017).html"><img src="images/Thor Ragnarok (2017).jpg" width="200px" alt="" /></a>
+		<p>Thor Ragnarok</p>
+        <p class="movie-year">2017 | 2h 11m</p>
+	</div>
+    
+    <div>
+		<a href="pages/You Were Never Really Here (2017).html"><img src="images/You Were Never Really Here (2017).jpg" width="200px" alt="" /></a>
+		<p>You Were Never Really Here</p>
+        <p class="movie-year">2017 | 1h 29m</p>
+	</div>
+    
+    <div>
+		<a href="pages/A Quiet Place (2018).html"><img src="images/A Quiet Place (2018).jpg" width="200px" alt="" /></a>
+		<p>A Quiet Place</p>
+        <p class="movie-year">2018 | 1h 30m</p>
+	</div>
+    
+    <div>
+		<a href="pages/AntMan and the Wasp (2018).html"><img src="images/AntMan and the Wasp (2018).jpg" width="200px" alt="" /></a>
+		<p>AntMan and the Wasp</p>
+        <p class="movie-year">2018 | 1h 58m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Avengers Infinity War (2018).html"><img src="images/Avengers Infinity War (2018).jpg" width="200px" alt="" /></a>
+		<p>Avengers Infinity War</p>
+        <p class="movie-year">2018 | 2h 29m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Black Panther (2018).html"><img src="images/Black Panther (2018).jpg" width="200px" alt="" /></a>
+		<p>Black Panther</p>
+        <p class="movie-year">2018 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Deadpool 2 (2018).html"><img src="images/Deadpool 2 (2018).jpg" width="200px" alt="" /></a>
+		<p>Deadpool 2</p>
+        <p class="movie-year">2018 | 2h 14m</p>
+	</div>
+    
+    <div>
+		<a href="pages/First Man (2018).html"><img src="images/First Man (2018).jpg" width="200px" alt="" /></a>
+		<p>First Man</p>
+        <p class="movie-year">2018 | 2h 21m</p>
+	</div>
+    
+    <div>
+		<a href="pages/First Reformed (2018).html"><img src="images/First Reformed (2018).jpg" width="200px" alt="" /></a>
+		<p>First Reformed</p>
+        <p class="movie-year">2018 | 1h 53m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Game Night (2018).html"><img src="images/Game Night (2018).jpg" width="200px" alt="" /></a>
+		<p>Game Night</p>
+        <p class="movie-year">2018 | 1h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Hereditary (2018).html"><img src="images/Hereditary (2018).jpg" width="200px" alt="" /></a>
+		<p>Hereditary</p>
+        <p class="movie-year">2018 | 2h 7m</p>
+	</div>
+    
+    <div>
+		<a href="pages/On the Basis of Sex (2018).html"><img src="images/On the Basis of Sex (2018).jpg" width="200px" alt="" /></a>
+		<p>On the Basis of Sex</p>
+        <p class="movie-year">2018 | 2h 0m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Rampage (2018).html"><img src="images/Rampage (2018).jpg" width="200px" alt="" /></a>
+		<p>Rampage</p>
+        <p class="movie-year">2018 | 1h 47m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Ready Player One (2018).html"><img src="images/Ready Player One (2018).jpg" width="200px" alt="" /></a>
+		<p>Ready Player One</p>
+        <p class="movie-year">2018 | 2h 20m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Red Sparrow (2018).html"><img src="images/Red Sparrow (2018).jpg" width="200px" alt="" /></a>
+		<p>Red Sparrow</p>
+        <p class="movie-year">2018 | 2h 20m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Skyscraper (2018).html"><img src="images/Skyscraper (2018).jpg" width="200px" alt="" /></a>
+		<p>Skyscraper</p>
+        <p class="movie-year">2018 | 1h 42m</p>
+	</div>
+    
+    <div>
+		<a href="pages/SpiderMan Into the SpiderVerse (2018).html"><img src="images/SpiderMan Into the SpiderVerse (2018).jpg" width="200px" alt="" /></a>
+		<p>SpiderMan Into the SpiderVerse</p>
+        <p class="movie-year">2018 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Tag (2018).html"><img src="images/Tag (2018).jpg" width="200px" alt="" /></a>
+		<p>Tag</p>
+        <p class="movie-year">2018 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Predator (2018).html"><img src="images/The Predator (2018).jpg" width="200px" alt="" /></a>
+		<p>The Predator</p>
+        <p class="movie-year">2018 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Thoroughbreds (2018).html"><img src="images/Thoroughbreds (2018).jpg" width="200px" alt="" /></a>
+		<p>Thoroughbreds</p>
+        <p class="movie-year">2018 | 1h 32m</p>
+	</div>
+    
+    <div>
+		<a href="pages/1917 (2019).html"><img src="images/1917 (2019).jpg" width="200px" alt="" /></a>
+		<p>1917</p>
+        <p class="movie-year">2019 | 1h 59m</p>
+	</div>
+    
+    <div>
+		<a href="pages/A Beautiful Day in the Neighborhood (2019).html"><img src="images/A Beautiful Day in the Neighborhood (2019).jpg" width="200px" alt="" /></a>
+		<p>A Beautiful Day in the Neighborhood</p>
+        <p class="movie-year">2019 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Apollo 11 (2019).html"><img src="images/Apollo 11 (2019).jpg" width="200px" alt="" /></a>
+		<p>Apollo 11</p>
+        <p class="movie-year">2019 | 1h 33m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Armstrong (2019).html"><img src="images/Armstrong (2019).jpg" width="200px" alt="" /></a>
+		<p>Armstrong</p>
+        <p class="movie-year">2019 | 1h 43m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Avengers Endgame (2019).html"><img src="images/Avengers Endgame (2019).jpg" width="200px" alt="" /></a>
+		<p>Avengers Endgame</p>
+        <p class="movie-year">2019 | 3h 1m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Brexit The Uncivil War (2019).html"><img src="images/Brexit The Uncivil War (2019).jpg" width="200px" alt="" /></a>
+		<p>Brexit The Uncivil War</p>
+        <p class="movie-year">2019 | 1h 33m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Can You Keep A Secret (2019).html"><img src="images/Can You Keep A Secret (2019).jpg" width="200px" alt="" /></a>
+		<p>Can You Keep A Secret</p>
+        <p class="movie-year">2019 | 1h 35m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Captain Marvel (2019).html"><img src="images/Captain Marvel (2019).jpg" width="200px" alt="" /></a>
+		<p>Captain Marvel</p>
+        <p class="movie-year">2019 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Gemini Man (2019).html"><img src="images/Gemini Man (2019).jpg" width="200px" alt="" /></a>
+		<p>Gemini Man</p>
+        <p class="movie-year">2019 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Glass (2019).html"><img src="images/Glass (2019).jpg" width="200px" alt="" /></a>
+		<p>Glass</p>
+        <p class="movie-year">2019 | 2h 9m</p>
+	</div>
+    
+    <div>
+		<a href="pages/It Chapter Two (2019).html"><img src="images/It Chapter Two (2019).jpg" width="200px" alt="" /></a>
+		<p>It Chapter Two</p>
+        <p class="movie-year">2019 | 2h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/John Wick Chapter 3  Parabellum (2019).html"><img src="images/John Wick Chapter 3  Parabellum (2019).jpg" width="200px" alt="" /></a>
+		<p>John Wick Chapter 3  Parabellum</p>
+        <p class="movie-year">2019 | 2h 11m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Jojo Rabbit (2019).html"><img src="images/Jojo Rabbit (2019).jpg" width="200px" alt="" /></a>
+		<p>Jojo Rabbit</p>
+        <p class="movie-year">2019 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Joker (2019).html"><img src="images/Joker (2019).jpg" width="200px" alt="" /></a>
+		<p>Joker</p>
+        <p class="movie-year">2019 | 2h 2m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Just Mercy (2019).html"><img src="images/Just Mercy (2019).jpg" width="200px" alt="" /></a>
+		<p>Just Mercy</p>
+        <p class="movie-year">2019 | 2h 17m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Knives Out (2019).html"><img src="images/Knives Out (2019).jpg" width="200px" alt="" /></a>
+		<p>Knives Out</p>
+        <p class="movie-year">2019 | 2h 10m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Little Women (2019).html"><img src="images/Little Women (2019).jpg" width="200px" alt="" /></a>
+		<p>Little Women</p>
+        <p class="movie-year">2019 | 2h 15m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Men in Black International (2019).html"><img src="images/Men in Black International (2019).jpg" width="200px" alt="" /></a>
+		<p>Men in Black International</p>
+        <p class="movie-year">2019 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Official Secrets (2019).html"><img src="images/Official Secrets (2019).jpg" width="200px" alt="" /></a>
+		<p>Official Secrets</p>
+        <p class="movie-year">2019 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Once Upon A Time In Hollywood (2019).html"><img src="images/Once Upon A Time In Hollywood (2019).jpg" width="200px" alt="" /></a>
+		<p>Once Upon A Time In Hollywood</p>
+        <p class="movie-year">2019 | 2h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Parasite (2019).html"><img src="images/Parasite (2019).jpg" width="200px" alt="" /></a>
+		<p>Parasite</p>
+        <p class="movie-year">2019 | 2h 12m</p>
+	</div>
+    
+    <div>
+		<a href="pages/SpiderMan Far from Home (2019).html"><img src="images/SpiderMan Far from Home (2019).jpg" width="200px" alt="" /></a>
+		<p>SpiderMan Far from Home</p>
+        <p class="movie-year">2019 | 2h 9m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Courier (2019).html"><img src="images/The Courier (2019).jpg" width="200px" alt="" /></a>
+		<p>The Courier</p>
+        <p class="movie-year">2019 | 1h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Irishman (2019).html"><img src="images/The Irishman (2019).jpg" width="200px" alt="" /></a>
+		<p>The Irishman</p>
+        <p class="movie-year">2019 | 3h 29m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Lighthouse (2019).html"><img src="images/The Lighthouse (2019).jpg" width="200px" alt="" /></a>
+		<p>The Lighthouse</p>
+        <p class="movie-year">2019 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Togo (2019).html"><img src="images/Togo (2019).jpg" width="200px" alt="" /></a>
+		<p>Togo</p>
+        <p class="movie-year">2019 | 1h 53m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Bloodshot (2020).html"><img src="images/Bloodshot (2020).jpg" width="200px" alt="" /></a>
+		<p>Bloodshot</p>
+        <p class="movie-year">2020 | 1h 49m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Emma (2020).html"><img src="images/Emma (2020).jpg" width="200px" alt="" /></a>
+		<p>Emma</p>
+        <p class="movie-year">2020 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Hamilton (2020).html"><img src="images/Hamilton (2020).jpg" width="200px" alt="" /></a>
+		<p>Hamilton</p>
+        <p class="movie-year">2020 | 2h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/One Night in Miami (2020).html"><img src="images/One Night in Miami (2020).jpg" width="200px" alt="" /></a>
+		<p>One Night in Miami</p>
+        <p class="movie-year">2020 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Palm Springs (2020).html"><img src="images/Palm Springs (2020).jpg" width="200px" alt="" /></a>
+		<p>Palm Springs</p>
+        <p class="movie-year">2020 | 1h 30m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Pieces of a Woman (2020).html"><img src="images/Pieces of a Woman (2020).jpg" width="200px" alt="" /></a>
+		<p>Pieces of a Woman</p>
+        <p class="movie-year">2020 | 2h 8m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Tenet (2020).html"><img src="images/Tenet (2020).jpg" width="200px" alt="" /></a>
+		<p>Tenet</p>
+        <p class="movie-year">2020 | 2h 30m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Banker (2020).html"><img src="images/The Banker (2020).jpg" width="200px" alt="" /></a>
+		<p>The Banker</p>
+        <p class="movie-year">2020 | 2h 0m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Invisible Man (2020).html"><img src="images/The Invisible Man (2020).jpg" width="200px" alt="" /></a>
+		<p>The Invisible Man</p>
+        <p class="movie-year">2020 | 2h 4m</p>
+	</div>
+    
+    <div>
+		<a href="pages/A Quiet Place Part 2 (2021).html"><img src="images/A Quiet Place Part 2 (2021).jpg" width="200px" alt="" /></a>
+		<p>A Quiet Place Part 2</p>
+        <p class="movie-year">2021 | 1h 37m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Black Widow (2021).html"><img src="images/Black Widow (2021).jpg" width="200px" alt="" /></a>
+		<p>Black Widow</p>
+        <p class="movie-year">2021 | 2h 14m</p>
+	</div>
+    
+    <div>
+		<a href="pages/CODA (2021).html"><img src="images/CODA (2021).jpg" width="200px" alt="" /></a>
+		<p>CODA</p>
+        <p class="movie-year">2021 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Dune (2021).html"><img src="images/Dune (2021).jpg" width="200px" alt="" /></a>
+		<p>Dune</p>
+        <p class="movie-year">2021 | 2h 35m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Eternals (2021).html"><img src="images/Eternals (2021).jpg" width="200px" alt="" /></a>
+		<p>Eternals</p>
+        <p class="movie-year">2021 | 2h 24m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Four Good Days (2021).html"><img src="images/Four Good Days (2021).jpg" width="200px" alt="" /></a>
+		<p>Four Good Days</p>
+        <p class="movie-year">2021 | 1h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Free Guy (2021).html"><img src="images/Free Guy (2021).jpg" width="200px" alt="" /></a>
+		<p>Free Guy</p>
+        <p class="movie-year">2021 | 1h 55m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Jungle Cruise (2021).html"><img src="images/Jungle Cruise (2021).jpg" width="200px" alt="" /></a>
+		<p>Jungle Cruise</p>
+        <p class="movie-year">2021 | 2h 7m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Last Night in Soho (2021).html"><img src="images/Last Night in Soho (2021).jpg" width="200px" alt="" /></a>
+		<p>Last Night in Soho</p>
+        <p class="movie-year">2021 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Old (2021).html"><img src="images/Old (2021).jpg" width="200px" alt="" /></a>
+		<p>Old</p>
+        <p class="movie-year">2021 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/ShangChi and the Legend of the Ten Rings (2021).html"><img src="images/ShangChi and the Legend of the Ten Rings (2021).jpg" width="200px" alt="" /></a>
+		<p>ShangChi and the Legend of the Ten Rings</p>
+        <p class="movie-year">2021 | 2h 12m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Sing 2 (2021).html"><img src="images/Sing 2 (2021).jpg" width="200px" alt="" /></a>
+		<p>Sing 2</p>
+        <p class="movie-year">2021 | 1h 50m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Spencer (2021).html"><img src="images/Spencer (2021).jpg" width="200px" alt="" /></a>
+		<p>Spencer</p>
+        <p class="movie-year">2021 | 1h 57m</p>
+	</div>
+    
+    <div>
+		<a href="pages/SpiderMan No Way Home (2021).html"><img src="images/SpiderMan No Way Home (2021).jpg" width="200px" alt="" /></a>
+		<p>SpiderMan No Way Home</p>
+        <p class="movie-year">2021 | 2h 28m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Fallout (2021).html"><img src="images/The Fallout (2021).jpg" width="200px" alt="" /></a>
+		<p>The Fallout</p>
+        <p class="movie-year">2021 | 1h 36m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Wrath of Man (2021).html"><img src="images/Wrath of Man (2021).jpg" width="200px" alt="" /></a>
+		<p>Wrath of Man</p>
+        <p class="movie-year">2021 | 1h 58m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Zack Snyders Justice League (2021).html"><img src="images/Zack Snyders Justice League (2021).jpg" width="200px" alt="" /></a>
+		<p>Zack Snyders Justice League</p>
+        <p class="movie-year">2021 | 4h 2m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Black Panther Wakanda Forever (2022).html"><img src="images/Black Panther Wakanda Forever (2022).jpg" width="200px" alt="" /></a>
+		<p>Black Panther Wakanda Forever</p>
+        <p class="movie-year">2022 | 2h 41m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Doctor Strange in the Multiverse of Madness (2022).html"><img src="images/Doctor Strange in the Multiverse of Madness (2022).jpg" width="200px" alt="" /></a>
+		<p>Doctor Strange in the Multiverse of Madness</p>
+        <p class="movie-year">2022 | 2h 7m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Everything Everywhere All at Once (2022).html"><img src="images/Everything Everywhere All at Once (2022).jpg" width="200px" alt="" /></a>
+		<p>Everything Everywhere All at Once</p>
+        <p class="movie-year">2022 | 2h 19m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Glass Onion A Knives Out Mystery (2022).html"><img src="images/Glass Onion A Knives Out Mystery (2022).jpg" width="200px" alt="" /></a>
+		<p>Glass Onion A Knives Out Mystery</p>
+        <p class="movie-year">2022 | 2h 21m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Harry Potter 20th Anniversary Return to Hogwarts (2022).html"><img src="images/Harry Potter 20th Anniversary Return to Hogwarts (2022).jpg" width="200px" alt="" /></a>
+		<p>Harry Potter 20th Anniversary Return to Hogwarts</p>
+        <p class="movie-year">2022 | 1h 43m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Mr Harrigans Phone (2022).html"><img src="images/Mr Harrigans Phone (2022).jpg" width="200px" alt="" /></a>
+		<p>Mr Harrigans Phone</p>
+        <p class="movie-year">2022 | 1h 46m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Prey (2022).html"><img src="images/Prey (2022).jpg" width="200px" alt="" /></a>
+		<p>Prey</p>
+        <p class="movie-year">2022 | 1h 40m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Rogue Agent (2022).html"><img src="images/Rogue Agent (2022).jpg" width="200px" alt="" /></a>
+		<p>Rogue Agent</p>
+        <p class="movie-year">2022 | 1h 56m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Good Nurse (2022).html"><img src="images/The Good Nurse (2022).jpg" width="200px" alt="" /></a>
+		<p>The Good Nurse</p>
+        <p class="movie-year">2022 | 2h 3m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Lost City (2022).html"><img src="images/The Lost City (2022).jpg" width="200px" alt="" /></a>
+		<p>The Lost City</p>
+        <p class="movie-year">2022 | 1h 52m</p>
+	</div>
+    
+    <div>
+		<a href="pages/The Wonder (2022).html"><img src="images/The Wonder (2022).jpg" width="200px" alt="" /></a>
+		<p>The Wonder</p>
+        <p class="movie-year">2022 | 1h 50m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Thor Love and Thunder (2022).html"><img src="images/Thor Love and Thunder (2022).jpg" width="200px" alt="" /></a>
+		<p>Thor Love and Thunder</p>
+        <p class="movie-year">2022 | 1h 59m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Weird The Al Yankovic Story (2022).html"><img src="images/Weird The Al Yankovic Story (2022).jpg" width="200px" alt="" /></a>
+		<p>Weird The Al Yankovic Story</p>
+        <p class="movie-year">2022 | 1h 48m</p>
+	</div>
+    
+    <div>
+		<a href="pages/Knock at the Cabin (2023).html"><img src="images/Knock at the Cabin (2023).jpg" width="200px" alt="" /></a>
+		<p>Knock at the Cabin</p>
+        <p class="movie-year">2023 | 1h 40m</p>
+	</div>
+    
 		</div>
-
-		<div class="container-fluid" id="search-results"></div>
+        <div class="container-fluid" id="search-results"></div>
 	</body>
-	<script src="script.js"></script>
-	<script src="search.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
 </html>

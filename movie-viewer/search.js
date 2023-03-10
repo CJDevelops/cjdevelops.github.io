@@ -42,6 +42,7 @@ async function searchFilms() {
 
 	// Load and search each film's information page in parallel using Promise.all
 	const requests = Array.from(links).map((link) => fetch(link.href));
+	let resultsFound = 0; // Counter for number of results found
 	for (let i = 0; i < requests.length; i++) {
 		const response = await requests[i];
 		if (response.ok) {
@@ -51,13 +52,18 @@ async function searchFilms() {
 				searchResults.appendChild(filmElement);
 				filmDirectory.classList.add("hidden");
 				searchResults.classList.remove("hidden");
+				resultsFound++; // Increment counter if a result is found
 			}
 		}
 	}
 
-	// Clear Search Bar and Display "Search Complete"
+	// Clear Search Bar and Display "Search Complete" or "No results Found"
 	searchBar.value = "";
 	const searchComplete = document.createElement("p");
-	searchComplete.textContent = "Search Complete";
+	if (resultsFound > 0) {
+		searchComplete.textContent = "Search Complete";
+	} else {
+		searchComplete.textContent = "No results Found";
+	}
 	searchResults.replaceChild(searchComplete, searchResults.firstChild);
 }

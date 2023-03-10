@@ -95,6 +95,15 @@ body:has(.filmPage) {
 	display: none;
 }
 
+.actorsAlsoInfo {
+	font-size: small;
+	opacity: 75%;
+}
+.tagInfo {
+	font-size: x-small;
+	opacity: 25%;
+}
+
 /* Style for the search bar */
 #search-bar {
 	width: 300px;
