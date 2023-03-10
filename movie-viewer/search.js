@@ -6,8 +6,8 @@ const searchResults = document.getElementById("search-results");
 
 // Add event listeners
 searchBtn.addEventListener("click", searchFilms);
-searchBar.addEventListener("keydown", handleSearchBarKeydown);
 resetBtn.addEventListener("click", resetPage);
+searchBar.addEventListener("keydown", handleSearchBarKeydown);
 
 // Function to handle "Enter" key press in search bar
 function handleSearchBarKeydown(event) {
@@ -17,11 +17,21 @@ function handleSearchBarKeydown(event) {
 	}
 }
 
+// Helper function to enable / disable a "hidden" class on items
+function toggleHidden(...elements) {
+	for (const [element, shouldHide] of elements) {
+		if (shouldHide) {
+			element.classList.add("hidden");
+		} else {
+			element.classList.remove("hidden");
+		}
+	}
+}
+
 function resetPage() {
 	// Clear search results and show film directory
 	searchResults.innerHTML = "";
-	searchResults.classList.add("hidden");
-	filmDirectory.classList.remove("hidden");
+	toggleHidden([filmDirectory, false], [searchResults, true]);
 }
 
 async function searchFilms() {
@@ -29,29 +39,26 @@ async function searchFilms() {
 	const links = filmDirectory.getElementsByTagName("a");
 
 	// Reset page if search term is empty
-	if (searchTerm === "") {
-		resetPage();
-		return;
-	}
+	if (searchTerm === "") return resetPage();
 
-	// Add "Searching" text
+	// Add "Searching" text and hide the film directory
 	searchResults.innerHTML = "<p>Searching...</p>";
+	toggleHidden([filmDirectory, true]);
 
-	// Hide film directory
-	filmDirectory.classList.add("hidden");
-
-	// Load and search each film's information page in parallel using Promise.all
+	// Make a list of every page to search
 	const requests = Array.from(links).map((link) => fetch(link.href));
 	let resultsFound = 0; // Counter for number of results found
+
+	// Loop over each request, if the page text includes searchTerm
+	// If searchTerm found then add it to the searchResults element
+	// Toggle the filmDirectory off and the searchResults on
 	for (let i = 0; i < requests.length; i++) {
 		const response = await requests[i];
 		if (response.ok) {
 			const content = await response.text();
 			if (content.toLowerCase().includes(searchTerm)) {
-				const filmElement = links[i].parentElement.cloneNode(true);
-				searchResults.appendChild(filmElement);
-				filmDirectory.classList.add("hidden");
-				searchResults.classList.remove("hidden");
+				searchResults.appendChild(links[i].parentElement.cloneNode(true));
+				toggleHidden([filmDirectory, true], [searchResults, false]);
 				resultsFound++; // Increment counter if a result is found
 			}
 		}
@@ -60,10 +67,6 @@ async function searchFilms() {
 	// Clear Search Bar and Display "Search Complete" or "No results Found"
 	searchBar.value = "";
 	const searchComplete = document.createElement("p");
-	if (resultsFound > 0) {
-		searchComplete.textContent = "Search Complete";
-	} else {
-		searchComplete.textContent = "No results Found";
-	}
+	searchComplete.textContent = resultsFound > 0 ? "Search Complete" : "No results Found";
 	searchResults.replaceChild(searchComplete, searchResults.firstChild);
 }

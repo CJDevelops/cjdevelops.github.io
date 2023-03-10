@@ -164,4 +164,8 @@ body:has(.filmPage) {
 	.filmHeading span {
 		margin-right: 5px;
 	}
+	.search {
+		width: 95%;
+		gap: 1%;
+	}
 }
