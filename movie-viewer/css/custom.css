@@ -106,7 +106,7 @@ body:has(.filmPage) {
 
 /* Style for the search bar */
 #search-bar {
-	width: 300px;
+	width: 60%;
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -116,6 +116,7 @@ body:has(.filmPage) {
 /* Style for the search button */
 #search-btn,
 #reset-btn {
+	width: 18%;
 	padding: 10px;
 	background-color: #007bff;
 	color: #fff;
@@ -131,7 +132,13 @@ body:has(.filmPage) {
 	background-color: #0062cc;
 }
 .search {
-	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto 20px;
+	position: sticky;
+	top: 1em;
+	z-index: 100;
 }
 /* Mobile Stuffs */
 
