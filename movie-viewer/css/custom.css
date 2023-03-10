@@ -160,4 +160,7 @@ body:has(.filmPage) {
 	.filmPage p {
 		padding: 0 1em 1em 1em;
 	}
+	.filmHeading span {
+		margin-right: 5px;
+	}
 }
