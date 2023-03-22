@@ -36,15 +36,16 @@ HTML_BOTTOM = """
 		</div>
         <div class="container-fluid" id="search-results"></div>
 	</body>
-    <script src="script.js"></script>
-    <script src="search.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
 </html>
 """
-# SOURCE_DIR = r'H:\Media\Films'
-# IMAGE_DIR = r'H:\Development\movie-viewer\images'
-SOURCE_DIR = '/Volumes/Connor/Media/Films'
-IMAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/images'
-PAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/pages'
+SOURCE_DIR = r'H:\Media\Films'
+IMAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\images'
+PAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\pages'
+# SOURCE_DIR = '/Volumes/Connor/Media/Films'
+# IMAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/images'
+# PAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/pages'
 IMAGE_SIZE = (300, 450)
 
 
@@ -178,5 +179,5 @@ def main(override=False):
 
 if __name__ == "__main__":
     write_to_HTML("movie-viewer/index.html", HTML_TOP, "w")
-    main(override=True)
+    main(override=False)
     write_to_HTML("movie-viewer/index.html", HTML_BOTTOM)
