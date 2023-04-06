@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import os
 import re
 from PIL import Image
+import platform
 
 # GLOBALS
 HTML_TOP = """
@@ -40,12 +41,18 @@ HTML_BOTTOM = """
     <script src="js/search.js"></script>
 </html>
 """
-SOURCE_DIR = r'H:\Media\Films'
-IMAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\images'
-PAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\pages'
-# SOURCE_DIR = '/Volumes/Connor/Media/Films'
-# IMAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/images'
-# PAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/pages'
+
+if platform.system() == 'Windows':
+    SOURCE_DIR = r'H:\Media\Films'
+    IMAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\images'
+    PAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\pages'
+elif platform.system() == 'Darwin':  # macOS uses 'Darwin' as its platform name
+    SOURCE_DIR = '/Volumes/Connor/Media/Films'
+    IMAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/images'
+    PAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/pages'
+else:
+    raise ValueError("Unsupported platform")
+
 IMAGE_SIZE = (300, 450)
 
 
