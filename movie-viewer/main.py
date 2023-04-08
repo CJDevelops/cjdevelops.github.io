@@ -44,10 +44,12 @@ HTML_BOTTOM = """
 
 if platform.system() == 'Windows':
     SOURCE_DIR = r'H:\Media\Films'
+    BASE_URL = r'H:\Development\cjdevelops.github.io\movie-viewer'
     IMAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\images'
     PAGE_DIR = r'H:\Development\cjdevelops.github.io\movie-viewer\pages'
 elif platform.system() == 'Darwin':  # macOS uses 'Darwin' as its platform name
     SOURCE_DIR = '/Volumes/Connor/Media/Films'
+    BASE_URL = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer'
     IMAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/images'
     PAGE_DIR = '/Volumes/Connor/Development/cjdevelops.github.io/movie-viewer/pages'
 else:
@@ -74,7 +76,7 @@ def process_data_from_nfo(data, override=False):
         <p class="movie-year">{data["year"]} | {new_runtime}</p>
 	</div>
     """
-    write_to_HTML("movie-viewer/index.html", file_string_main)
+    write_to_HTML(f"{BASE_URL}/index.html", file_string_main)
 
     file_string_each = f"""
     <!DOCTYPE html>
@@ -185,6 +187,6 @@ def main(override=False):
 
 
 if __name__ == "__main__":
-    write_to_HTML("movie-viewer/index.html", HTML_TOP, "w")
+    write_to_HTML(f"{BASE_URL}/index.html", HTML_TOP, "w")
     main(override=False)
-    write_to_HTML("movie-viewer/index.html", HTML_BOTTOM)
+    write_to_HTML(f"{BASE_URL}/index.html", HTML_BOTTOM)
